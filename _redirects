@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://yeadamkim.netlify.app/* https://www.yeadamkim.com/:splat 301!
