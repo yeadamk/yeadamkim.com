@@ -1,0 +1,35 @@
+/* Color variables */
+:root {
+  --primary-color: #1f2f5f;
+  --secondary-color: #2e488e;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(210, 167, 58);
+  min-height: 90vh;
+}
+
+.hero-text {
+  color: black;
+  font-weight: 600;
+  text-align: center;
+  font-size: max(4rem, 10vmin);
+  padding: 2.2rem;
+
+  @media (max-width: 500px) {
+    font-size: 2.5rem;
+  }
+}
+
+.hero-name {
+  font-family: Monarda, Helvetica, sans-serif;
+  transition: color 1s;
+}
+
+.hero-name:hover {
+  color: var(--primary-color);
+  transition: color 7s;
+}

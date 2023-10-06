@@ -1,0 +1,43 @@
+/* Fonts */
+@font-face {
+  font-family: "Monarda";
+  src: url("../../static/fonts/Monarda.ttf");
+}
+
+@font-face {
+  font-family: "PixelifySans";
+  src: url("../../static/fonts/PixelifySans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "DMSerifDisplay";
+  src: url("../../static/fonts/DMSerifDisplay-Regular.ttf");
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: url("https://cdn.custom-cursor.com/db/cursor/32/Bongo_Cat_Cursor.png"), default;
+}
+
+body {
+  font-family: DMSerifDisplay, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a, .clickable {
+  cursor: url("https://cdn.custom-cursor.com/db/pointer/32/Bongo_Cat_Pointer.png"), default;
+}
+
+a {
+  background-color: transparent;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
