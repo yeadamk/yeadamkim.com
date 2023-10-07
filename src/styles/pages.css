@@ -33,3 +33,8 @@
   color: var(--primary-color);
   transition: color 7s;
 }
+
+/* Active pages */
+.active {
+  color: goldenrod;
+}

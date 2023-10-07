@@ -2,16 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-const NavItem = styled(Link)`
-  text-decoration: none;
-  color: #111;
+const NavItem = styled(Link).attrs((props) => ({
+  className: props.className,
+}))`
+  color: #111111;
   display: inline-block;
+  font-size: 1.125rem;
   white-space: nowrap;
   margin: 0 1vw;
-  transition: all 200ms ease-in;
+  transition: color 200ms ease-in;
   position: relative;
 
-  ::after {
+  &::after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -20,13 +22,14 @@ const NavItem = styled(Link)`
     background: goldenrod;
     content: ".";
     color: transparent;
-    height: 1px;
+    height: 1.5px;
     transition: all 0.4s ease-in;
   }
 
-  :hover {
+  &:hover {
+    display: block;
     color: goldenrod;
-    ::after {
+    &::after {
       width: 100%;
     }
   }
@@ -34,15 +37,25 @@ const NavItem = styled(Link)`
   @media (max-width: 768px) {
     padding: 1.2rem 0;
     font-size: 1.5rem;
-    z-index: 6;
+    z-index: 7;
   }
 `;
+
 const NavbarLinks = () => {
   return (
     <React.Fragment>
-      <NavItem to="/about">About</NavItem>
-      <NavItem to="/projects">Projects</NavItem>
-      <NavItem to="/404">Contact</NavItem>
+      <NavItem to="/" activeClassName="active">
+        Home
+      </NavItem>
+      <NavItem to="/about" activeClassName="active">
+        About
+      </NavItem>
+      <NavItem to="/projects" activeClassName="active">
+        Projects
+      </NavItem>
+      <NavItem to="/404" activeClassName="active">
+        Contact
+      </NavItem>
     </React.Fragment>
   );
 };

@@ -33,7 +33,7 @@ const Toggle = styled.div.attrs((props) => ({
   display: none;
   height: 100%;
   cursor: pointer;
-  margin: 0 10vw;
+  margin: 0 5vw;
   padding: 0;
 
   @media (max-width: 768px) {
@@ -73,8 +73,8 @@ const Hamburger = styled.div.attrs((props) => ({
   position: relative;
   transform: ${(props) => (props.open ? "rotate(-45deg)" : "inherit")};
 
-  ::before,
-  ::after {
+  &::before,
+  &::after {
     width: 30px;
     height: 3px;
     background-color: #111;
@@ -83,13 +83,13 @@ const Hamburger = styled.div.attrs((props) => ({
     transition: all 0.2s linear;
   }
 
-  ::before {
+  &::before {
     transform: ${(props) =>
       props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
     top: -10px;
   }
 
-  ::after {
+  &::after {
     opacity: ${(props) => (props.open ? "0" : "1")};
     transform: ${(props) => (props.open ? "rotate(90deg) " : "rotate(0deg)")};
     top: 10px;

@@ -32,8 +32,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `yeadamkim.com`,
-        short_name: `yeadam`,
+        name: `Yeadam Kim`,
+        short_name: `YK`,
         start_url: `/`,
         background_color: `#663399`,
         display: `minimal-ui`,
