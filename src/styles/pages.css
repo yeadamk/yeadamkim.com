@@ -10,6 +10,15 @@
   justify-content: center;
   background-color: rgb(210, 167, 58);
   min-height: 90vh;
+
+  @media (max-width: 768px) {
+    min-height: auto;
+    height: 90vh;
+  }
+
+  @media (max-height: 300px) {
+    display: none;
+  }
 }
 
 .hero-text {
@@ -19,7 +28,7 @@
   font-size: max(4rem, 10vmin);
   padding: 2.2rem;
 
-  @media (max-width: 500px) {
+  @media (max-width: 564px) {
     font-size: 2.5rem;
   }
 }

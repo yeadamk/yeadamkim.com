@@ -57,7 +57,7 @@ const Navbox = styled.div.attrs((props) => ({
     padding-top: 10vh;
     background-color: #fff;
     transition: all 0.2s ease-in;
-    top: 8vh;
+    top: max(3.5rem, 10vh);
     left: ${(props) => (props.open ? "-100%" : "0")};
   }
 `;
@@ -98,11 +98,59 @@ const Hamburger = styled.div.attrs((props) => ({
 
 const LogoWrap = styled.div`
   margin: auto 0;
-  flex: 0 1 36px;
+  flex: 0 1 2.5rem;
 
   @media (max-width: 768px) and (orientation: landscape) {
-    flex: 0 1 25px;
+    flex: 0 1 2rem;
   }
+
+  &:hover {
+    animation-name: wiggle;
+    -webkit-animation-name: wiggle;
+
+    animation-fill-mode: both
+    -webkit-animation-fill-mode: both;
+
+    animation-duration: 1s;
+    animation-timing-function: linear;
+  }
+
+@keyframes wiggle {
+  from {
+    -webkit-transform: none;
+    transform: none
+  }
+
+  15% {
+    -webkit-transform: translate3d(-20%,0,0) rotate3d(0,0,1,-8deg);
+    transform: translate3d(-20%,0,0) rotate3d(0,0,1,-8deg)
+  }
+
+  30% {
+    -webkit-transform: translate3d(10%,0,0) rotate3d(0,0,1,5deg);
+    transform: translate3d(10%,0,0) rotate3d(0,0,1,7deg)
+  }
+
+  45% {
+    -webkit-transform: translate3d(-15%,0,0) rotate3d(0,0,1,-5deg);
+    transform: translate3d(-15%,0,0) rotate3d(0,0,1,-5deg)
+  }
+
+  60% {
+    -webkit-transform: translate3d(10%,0,0) rotate3d(0,0,1,2deg);
+    transform: translate3d(10%,0,0) rotate3d(0,0,1,2deg)
+  }
+
+  75% {
+    -webkit-transform: translate3d(-5%,0,0) rotate3d(0,0,1,-2deg);
+    transform: translate3d(-5%,0,0) rotate3d(0,0,1,-2deg)
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none
+  }
+}
 `;
 
 const Navbar = () => {
