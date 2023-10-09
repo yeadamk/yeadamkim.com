@@ -22,6 +22,9 @@ const IndexPage = () => (
         <RoughNotation className="hero-name" content="Yeadam&nbsp;Kim!" />
       </h1>
     </div>
+    <div className="link-container">
+
+    </div>
   </Layout>
 );
 

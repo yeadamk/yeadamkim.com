@@ -45,7 +45,7 @@ const Footer = () => (
       <Link to="https://www.instagram.com/yeadam.k">
         <FaInstagram size={iconSize} />
       </Link>
-      <Link to="https://github.com/yeadamk">
+      <Link to="https://github.com/yeadamk/yeadamkim.com">
         <FaGithub size={iconSize} />
       </Link>
     </SocialMedia>

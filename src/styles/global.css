@@ -19,8 +19,15 @@
   src: url("../../static/fonts/AutourOne-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Raleway";
+  src: url("../../static/fonts/Raleway-Regular.ttf");
+}
+
+/* Global CSS settings */
 html {
-  cursor: url("https://cdn.custom-cursor.com/db/cursor/32/Bongo_Cat_Cursor.png"), default;
+  cursor: url("https://cdn.custom-cursor.com/db/cursor/32/Bongo_Cat_Cursor.png"),
+    default;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -31,8 +38,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-a, .clickable {
-  cursor: url("https://cdn.custom-cursor.com/db/pointer/32/Bongo_Cat_Pointer.png"), default;
+a,
+.clickable {
+  cursor: url("https://cdn.custom-cursor.com/db/pointer/32/Bongo_Cat_Pointer.png"),
+    default;
 }
 
 a {

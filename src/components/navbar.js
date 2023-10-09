@@ -5,10 +5,10 @@ import { StaticImage } from "gatsby-plugin-image";
 import NavbarLinks from "./navbarLinks";
 
 const Navigation = styled.nav`
+  position: relative;
   display: flex;
   height: max(5rem, 10vh);
   background-color: #fff;
-  position: relative;
   justify-content: space-between;
   text-transform: uppercase;
   border-bottom: 2px solid #33333320;
