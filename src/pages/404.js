@@ -9,7 +9,7 @@ const NotFoundPage = () => (
     <div className="hero-container">
       <h1 className="hero-text">
         <RoughNotation
-          className="hero-name"
+          className="cursive"
           content="404: Not&nbsp;Found"
           type="crossed-off"
           color="black"

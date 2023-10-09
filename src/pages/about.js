@@ -8,7 +8,7 @@ import "../styles/pages.css";
 const AboutPage = () => (
   <Layout>
     <div className="hero-container">
-      <h1 className="hero-text hero-name">Coming Soon...</h1>
+      <h1 className="hero-text cursive">Coming Soon...</h1>
     </div>
   </Layout>
 );

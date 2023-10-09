@@ -8,6 +8,7 @@ const NavItem = styled(Link).attrs((props) => ({
   color: #111111;
   display: inline-block;
   font-size: 1.125rem;
+  text-transform: uppercase;
   white-space: nowrap;
   margin: 0 1vw;
   transition: color 200ms ease-in;

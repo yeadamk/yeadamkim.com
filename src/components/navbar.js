@@ -8,9 +8,10 @@ const Navigation = styled.nav`
   position: relative;
   display: flex;
   height: max(5rem, 10vh);
-  background-color: #fff;
+  background-color: white;
   justify-content: space-between;
-  text-transform: uppercase;
+  transition: background-color 0.3s ease-in;
+
   border-bottom: 2px solid #33333320;
   margin: 0 auto;
   padding: 0 5vw;
@@ -24,6 +25,10 @@ const Navigation = styled.nav`
     left: 0;
     right: 0;
     left: 0;
+
+    background-color: ${(props) =>
+      props.isOpen ? "rgb(210, 167, 58)" : "white"};
+    transition: background-color 0.3s ease-in;
   }
 `;
 
@@ -157,7 +162,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <Navigation>
+    <Navigation isOpen={navbarOpen}>
       <LogoWrap as={Link} to="/">
         <StaticImage
           alt="navigation bar logo"

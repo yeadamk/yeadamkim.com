@@ -2,13 +2,14 @@
 :root {
   --primary-color: #1f2f5f;
   --secondary-color: #2e488e;
+  --bright-yellow: rgb(210, 167, 58);
 }
 
 .hero-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(210, 167, 58);
+  background-color: var(--bright-yellow);
   min-height: 90vh;
 
   @media (max-width: 768px) {
@@ -36,6 +37,10 @@
 .hero-name {
   font-family: Monarda, Helvetica, sans-serif;
   transition: color 1s;
+}
+
+.cursive {
+  font-family: Monarda, Helvetica, sans-serif;
 }
 
 .hero-name:hover {
