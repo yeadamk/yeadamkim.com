@@ -2,7 +2,7 @@ import * as React from "react";
 import Layout from "../components/layout";
 import RoughNotation from "../components/roughNotation";
 import Seo from "../components/seo";
-import "../styles/pages.css";
+import "../styles/pages.scss";
 
 const ProjectsPage = () => (
   <Layout>
@@ -21,7 +21,5 @@ const ProjectsPage = () => (
   </Layout>
 );
 
-// Head SEO
-export const Head = () => <Seo />;
-
+export const Head = () => <Seo description="Yeadam's projects page"/>;
 export default ProjectsPage;

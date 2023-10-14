@@ -1,6 +1,9 @@
 ---
-title: About me
+title: "About me"
+author: "Yeadam Kim"
+description: "Introducing myself"
 date: 2023-10-09
+slug: "introduction"
 ---
 
 # Let me introduce myself...

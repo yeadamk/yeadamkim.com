@@ -2,7 +2,7 @@ import * as React from "react";
 import Layout from "../components/layout";
 import RoughNotation from "../components/roughNotation";
 import Seo from "../components/seo";
-import "../styles/pages.css";
+import "../styles/pages.scss";
 
 const NotFoundPage = () => (
   <Layout>
@@ -21,6 +21,7 @@ const NotFoundPage = () => (
   </Layout>
 );
 
-export const Head = () => <Seo title="Page Not Found :(" />;
-
+export const Head = () => (
+  <Seo title="Page Not Found :(" description="404 page" />
+);
 export default NotFoundPage;

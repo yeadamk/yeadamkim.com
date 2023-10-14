@@ -1,10 +1,4 @@
 /**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
- */
-
-/**
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
@@ -23,6 +17,20 @@ module.exports = {
     `react-rough-notation`,
     `babel-plugin-styled-components`,
     `gatsby-transformer-remark`,
+    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require("sass"),
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/content`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -39,13 +47,6 @@ module.exports = {
         background_color: `#D2A73A`,
         display: `minimal-ui`,
         icon: `src/images/favicon_darkblue/favicon.png`,
-      },
-    },
-    {
-      resolve: `npm`,
-      options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/src/pages/content`,
       },
     },
   ],

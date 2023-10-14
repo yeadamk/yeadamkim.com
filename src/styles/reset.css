@@ -66,10 +66,10 @@ body {
   line-height: 1.5;
 }
 
-/* Hyperlink */
+/* Hyperlinks */
 a {
-  /* text-decoration: none; */
-  /* background-color: transparent; */
+  text-decoration: none;
+  background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 
@@ -98,6 +98,30 @@ input,
 button,
 textarea,
 select {
+  font: inherit;
+}
+
+/* Correct the cursor style of increment and decrement buttons in Chrome*/
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* Search appearance */
+[type="search"] {
+  appearance: textfield;
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+/* Remove the inner padding in Chrome and Safari on macOS. */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* Button appearance */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
   font: inherit;
 }
 

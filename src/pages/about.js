@@ -1,9 +1,9 @@
 import * as React from "react";
 // import { Link } from "gatsby";
-import Layout from "../components/layout";
 // import RoughNotation from "../components/roughNotation";
+import Layout from "../components/layout";
 import Seo from "../components/seo";
-import "../styles/pages.css";
+import "../styles/pages.scss";
 
 const AboutPage = () => (
   <Layout>
@@ -13,6 +13,5 @@ const AboutPage = () => (
   </Layout>
 );
 
-export const Head = () => <Seo />;
-
+export const Head = () => <Seo description="Yeadam's about page" />;
 export default AboutPage;

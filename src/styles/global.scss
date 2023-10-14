@@ -1,3 +1,7 @@
+:root {
+  --sysfont: --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 /* Fonts */
 @font-face {
   font-family: "Monarda";
@@ -15,13 +19,18 @@
 }
 
 @font-face {
-  font-family: "AutourOne";
-  src: url("../../static/fonts/AutourOne-Regular.ttf");
+  font-family: "Lato-Black";
+  src: url("../../static/fonts/Lato-Black.ttf");
 }
 
 @font-face {
-  font-family: "Raleway";
-  src: url("../../static/fonts/Raleway-Regular.ttf");
+  font-family: "Lato-Regular";
+  src: url("../../static/fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: "SourceCodePro";
+  src: url("../../static/fonts/SourceCodePro-Regular.ttf");
 }
 
 /* Global CSS settings */
@@ -33,7 +42,7 @@ html {
 }
 
 body {
-  font-family: DMSerifDisplay, Helvetica, sans-serif;
+  font-family: var(--sysfont);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

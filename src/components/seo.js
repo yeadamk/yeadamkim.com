@@ -8,24 +8,23 @@ import { useStaticQuery, graphql } from "gatsby";
  * description: Sets custom description
  * author: Sets custom author
  * children: Other meta tags
+ *
+ * query data from gatsby-config.js
  */
 function Seo({ title, description, author, children }) {
-  const { site } = useStaticQuery(
-    // From gatsby-config.js
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            keywords
-            siteUrl
-          }
+  const site = useStaticQuery(graphql`
+    query SiteMetadataQuery {
+      site {
+        siteMetadata {
+          title
+          description
+          author
+          keywords
+          siteUrl
         }
       }
-    `,
-  );
+    }
+  `);
 
   const seo = {
     title: title || site.siteMetadata?.title || "",

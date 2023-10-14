@@ -35,6 +35,10 @@ const NavItem = styled(Link).attrs((props) => ({
     }
   }
 
+  @media (max-width: 1024px) {
+    margin: 0 2vw;
+  }
+
   @media (max-width: 768px) {
     padding: 1.2rem 0;
     font-size: 1.5rem;
@@ -45,16 +49,19 @@ const NavItem = styled(Link).attrs((props) => ({
 const NavbarLinks = () => {
   return (
     <React.Fragment>
-      <NavItem to="/" activeClassName="active">
+      <NavItem to="/" activeClassName="active" className="clickable">
         Home
       </NavItem>
-      <NavItem to="/about" activeClassName="active">
+      <NavItem to="/about" activeClassName="active" className="clickable">
         About
       </NavItem>
-      <NavItem to="/projects" activeClassName="active">
+      <NavItem to="/projects" activeClassName="active" className="clickable">
         Projects
       </NavItem>
-      <NavItem to="/404" activeClassName="active">
+      {/* <NavItem to="/blog" activeClassName="active" className="clickable">
+        Blog
+      </NavItem> */}
+      <NavItem to="/404" activeClassName="active" className="clickable">
         Contact
       </NavItem>
     </React.Fragment>

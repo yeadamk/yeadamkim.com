@@ -1,0 +1,20 @@
+.blog-title {
+  color: black;
+  font-weight: 600;
+  text-align: center;
+  font-size: max(2rem, 5vmin);
+  padding: 2.2rem;
+
+  @media (max-width: 564px) {
+    font-size: 2.5rem;
+  }
+}
+
+.blog-posts-container {
+  display: grid;
+}
+
+.blog-posts {
+  background-color: white;
+  padding: 1rem;
+}
