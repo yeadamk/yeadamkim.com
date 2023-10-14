@@ -3,7 +3,6 @@
  */
 @import "typed";
 @import "typed-config";
-@import "blog";
 
 /* 
  * Color variables
@@ -173,24 +172,5 @@ body {
         display: none;
       }
     }
-  }
-}
-
-.blog-container {
-  display: grid;
-  grid-gap: 0;
-  grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
-  align-items: center;
-  justify-items: center;
-  background-color: $bright-yellow;
-  min-height: 90vh;
-
-  @media (max-height: 300px) {
-    display: none;
-  }
-
-  @media (max-width: 768px) {
-    min-height: auto;
-    height: 90vh;
   }
 }

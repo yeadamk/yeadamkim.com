@@ -3,7 +3,7 @@ import * as React from "react";
 // import RoughNotation from "../components/roughNotation";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import "../styles/pages.scss";
+import "../styles/about.scss";
 
 const AboutPage = () => (
   <Layout>

@@ -3,7 +3,7 @@ import * as React from "react";
 import Layout from "../components/layout";
 import RoughNotation from "../components/roughNotation";
 import Seo from "../components/seo";
-import "../styles/pages.scss";
+import "../styles/index.scss";
 
 // const links = [
 //   {

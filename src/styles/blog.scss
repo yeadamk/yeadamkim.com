@@ -1,3 +1,30 @@
+/* 
+ * Color variables
+ */
+$bright-yellow: rgb(210, 167, 58);
+
+/* 
+ * Page specific styles
+ */
+.blog-container {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+  align-items: center;
+  justify-items: center;
+  background-color: $bright-yellow;
+  min-height: 90vh;
+
+  @media (max-height: 300px) {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    min-height: auto;
+    height: 90vh;
+  }
+}
+
 .blog-title {
   color: black;
   font-weight: 600;
