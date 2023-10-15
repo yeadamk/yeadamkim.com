@@ -6,15 +6,15 @@ import Seo from "../components/seo";
 import "../styles/index.scss";
 
 const about =
-  "I'm a third-year Mathematics of Computation major at UCLA.\n\nI'm exploring many career possibilities at the moment, but I am strongly passionate in the field of software engineering. With a solid foundation in mathematics and computer science, I aspire to embark on a career where I can make both positive and meaningful impact on the world. Beyond my studies, I enjoy playing soccer and practicing jazz piano.";
+  "I'm a third-year Mathematics of Computation major at UCLA.\n\nWhile actively exploring various career opportunities at the moment, I'm particularly passionate in the field of software engineering. I love to work on personal projects on the side, tinker around with my linux terminal, and watch fun tech videos on YouTube. With a strong foundation in mathematics and computer science, I hope to pursue a software engineering career upon graduation. Apart from academics, I also enjoy playing various sports (e.g. soccer, badminton, volleyball, and more), and have great interest in jazz piano.";
 
 const projects =
   "In completion of this website, I will post all of my past projects here to present the works I've been doing along the way.\n\nThank you for visiting!";
 
 const linkTree = [
   {
-    text: "Home",
-    url: "https://www.yeadamkim.com",
+    text: "Email",
+    url: "mailto:hiyeadam@gmail.com",
   },
   {
     text: "GitHub",
@@ -54,13 +54,11 @@ const IndexPage = () => (
         <p className="about-text-right">{projects}</p>
       </section>
       <ul id="contact" className="link-container">
-        <u className="link-header">Link Tree</u>
+        <section className="link-header">Link Tree</section>
         {linkTree.map((link) => (
-          <li key={link.url} className="link-item">
-            <a className="link-text" href={`${link.url}`}>
-              {link.text}
-            </a>
-          </li>
+          <a key={link.url} className="link-item" href={`${link.url}`}>
+            <div className="link-text">{link.text}</div>
+          </a>
         ))}
       </ul>
     </div>

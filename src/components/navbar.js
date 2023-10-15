@@ -26,10 +26,6 @@ const Navigation = styled.nav`
     left: 0;
     right: 0;
     left: 0;
-
-    background-color: ${(props) =>
-      props.isOpen ? "rgb(210, 167, 58)" : "white"};
-    transition: background-color 0.3s ease-in;
   }
 `;
 
@@ -107,8 +103,9 @@ const LogoWrap = styled.div`
   margin: auto 0;
   flex: 0 1 2.5rem;
 
-  @media (max-width: 768px) and (orientation: landscape) {
+  @media (max-width: 768px) {
     flex: 0 1 2.5rem;
+    margin: auto .5rem;
   }
 
   &:hover {
@@ -201,7 +198,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <Navigation isOpen={navbarOpen}>
+    <Navigation>
       <LogoWrap as={Link} to="/">
         <StaticImage
           alt="navigation bar logo"
@@ -209,11 +206,7 @@ const Navbar = () => {
           loading="eager"
         />
       </LogoWrap>
-      <Toggle
-        className="clickable"
-        navbarOpen={navbarOpen}
-        onClick={() => setNavbarOpen(!navbarOpen)}
-      >
+      <Toggle className="clickable" onClick={() => setNavbarOpen(!navbarOpen)}>
         {navbarOpen ? <Hamburger open className="clickable" /> : <Hamburger />}
       </Toggle>
       {navbarOpen ? (

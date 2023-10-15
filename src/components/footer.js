@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { FaGithub, FaInstagram } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const iconSize = 30;
 
@@ -40,11 +41,10 @@ const Text = styled.div`
 
 const Footer = () => (
   <FooterLayout>
-    <Text>© {new Date().getFullYear()} Yeadam Kim</Text>
+    <Text>
+      <AnchorLink to="/">© {new Date().getFullYear()} Yeadam Kim</AnchorLink>
+    </Text>
     <SocialMedia>
-      <a href="https://www.instagram.com/yeadam.k" rel="instagram">
-        <FaInstagram size={iconSize} />
-      </a>
       <a href="https://github.com/yeadamk/yeadamkim.com" rel="github">
         <FaGithub size={iconSize} />
       </a>

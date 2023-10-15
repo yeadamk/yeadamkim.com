@@ -18,7 +18,13 @@ module.exports = {
     `babel-plugin-styled-components`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-mdx`,
-    `gatsby-plugin-anchor-links`,
+    `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        duration: 0,
+      },
+    },
     {
       resolve: `gatsby-plugin-sass`,
       options: {
