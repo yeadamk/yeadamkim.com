@@ -16,7 +16,7 @@ const Navigation = styled.nav`
   border-bottom: 2px solid #33333320;
   margin: 0 auto;
   padding: 0 5vw;
-  z-index: 2;
+  z-index: 7;
   align-self: center;
 
   @media (max-width: 768px) {
@@ -54,6 +54,7 @@ const Navbox = styled.div.attrs((props) => ({
   height: 100%;
   justify-content: flex-end;
   align-items: center;
+  z-index: 10;
 
   @media (max-width: 768px) {
     flex-direction: column;

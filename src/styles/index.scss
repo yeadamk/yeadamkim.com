@@ -83,10 +83,6 @@ $light-dark: #1f1f1f;
     min-height: auto;
     height: 90vh;
   }
-
-  @media (max-height: 400px) {
-    display: none;
-  }
 }
 
 .hero-text {
@@ -117,7 +113,7 @@ $light-dark: #1f1f1f;
 
 .type-wrapper {
   display: inline-block;
-  z-index: 10;
+  z-index: 2;
   position: relative;
   width: auto;
 
@@ -200,8 +196,12 @@ $light-dark: #1f1f1f;
   font-size: 2.5rem;
   text-align: center;
   margin-top: 10vh;
-  margin-bottom: 3vh;
+  margin-bottom: max(2rem, 3vh);
   padding: 1rem 4rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
 }
 
 .about-text {
@@ -214,6 +214,11 @@ $light-dark: #1f1f1f;
   font-size: 1.5rem;
   max-width: 60ch;
   padding: 2rem;
+  margin-bottom: max(2rem, 3vh);
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 }
 
 .about-header-right {
@@ -251,6 +256,7 @@ $light-dark: #1f1f1f;
   color: white;
   font-size: 2.5rem;
   font-weight: bold;
+  margin-top: max(3rem, 7vh);
   margin-bottom: max(0.8rem, 3vh);
 
   @media (max-width: 768px) {
@@ -272,6 +278,10 @@ $light-dark: #1f1f1f;
     background-color: $dark;
     color: white;
     transition: all 0s;
+  }
+
+  &:last-child {
+    margin-bottom: 4rem;
   }
 
   @media (max-width: 1024px) {
