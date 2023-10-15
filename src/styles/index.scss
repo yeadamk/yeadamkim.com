@@ -79,6 +79,10 @@ $light-dark: #1f1f1f;
   background-color: $bright-yellow;
   min-height: 90vh;
 
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
   @media (max-width: 768px) {
     min-height: auto;
     height: 90vh;
