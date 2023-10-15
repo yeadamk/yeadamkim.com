@@ -7,6 +7,7 @@ import NavbarLinks from "./navbarLinks";
 const Navigation = styled.nav`
   position: relative;
   display: flex;
+  font-family: DMSerifDisplay, Arial, Helvetica, sans-serif;
   height: max(3.5rem, 10vh);
   background-color: white;
   justify-content: space-between;
@@ -81,7 +82,7 @@ const Hamburger = styled.div.attrs((props) => ({
   &::before,
   &::after {
     width: 30px;
-    height: 3px;
+    height: 3.1px;
     background-color: #111;
     content: "";
     position: absolute;
@@ -106,7 +107,7 @@ const LogoWrap = styled.div`
   flex: 0 1 2.5rem;
 
   @media (max-width: 768px) and (orientation: landscape) {
-    flex: 0 1 2rem;
+    flex: 0 1 2.5rem;
   }
 
   &:hover {

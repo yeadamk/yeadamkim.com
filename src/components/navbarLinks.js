@@ -8,9 +8,11 @@ const NavItem = styled(Link).attrs((props) => ({
   color: #111111;
   display: inline-block;
   font-size: 1.125rem;
-  text-transform: uppercase;
+  font-family: Lato-Regular, Arial, Helvetica, sans-serif;
+  text-transform: lowercase;
+  font-weight: 600;
   white-space: nowrap;
-  margin: 0 1vw;
+  margin: 0 1.2vw;
   transition: color 200ms ease-in;
   position: relative;
 
@@ -23,8 +25,8 @@ const NavItem = styled(Link).attrs((props) => ({
     background: goldenrod;
     content: ".";
     color: transparent;
-    height: 1.5px;
-    transition: all 0.4s ease-in;
+    height: 2px;
+    transition: all 0.3s ease-in;
   }
 
   &:hover {
@@ -61,7 +63,7 @@ const NavbarLinks = () => {
       {/* <NavItem to="/blog" activeClassName="active" className="clickable">
         Blog
       </NavItem> */}
-      <NavItem to="/404" activeClassName="active" className="clickable">
+      <NavItem to="/contact" activeClassName="active" className="clickable">
         Contact
       </NavItem>
     </React.Fragment>

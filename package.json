@@ -2,11 +2,12 @@
   "name": "yeadamkim.com",
   "private": true,
   "description": "Yeadam's personal website",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Yeadam Kim",
   "dependencies": {
     "babel-plugin-styled-components": "^2.1.4",
     "gatsby": "^5.12.4",
+    "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-image": "^3.12.0",
     "gatsby-plugin-manifest": "^5.12.0",
     "gatsby-plugin-mdx": "^5.12.1",

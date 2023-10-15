@@ -8,7 +8,7 @@ import "../styles/about.scss";
 const AboutPage = () => (
   <Layout>
     <div className="hero-container">
-      <h1 className="hero-text cursive">Coming Soon...</h1>
+      <h1 className="hero-text cursive">Still under development...</h1>
     </div>
   </Layout>
 );

@@ -1,5 +1,6 @@
 :root {
-  --sysfont: --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --sysfont: --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 /* Fonts */
@@ -35,8 +36,7 @@
 
 /* Global CSS settings */
 html {
-  cursor: url("https://cdn.custom-cursor.com/db/cursor/32/Bongo_Cat_Cursor.png"),
-    default;
+  cursor: url("https://cdn.custom-cursor.com/db/cursor/32/Bongo_Cat_Cursor.png"), default;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -49,8 +49,7 @@ body {
 
 a,
 .clickable {
-  cursor: url("https://cdn.custom-cursor.com/db/pointer/32/Bongo_Cat_Pointer.png"),
-    default;
+  cursor: url("https://cdn.custom-cursor.com/db/pointer/32/Bongo_Cat_Pointer.png"), default;
 }
 
 a {
