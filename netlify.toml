@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "https://yeadamkim.netlify.app/*"
+  to = "https://www.yeadamkim.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://main--yeadamkim.netlify.app/*"
+  to = "https://www.yeadamkim.com/:splat"
+  status = 301
+  force = true
