@@ -33,7 +33,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build && cp _redirects public/_redirects",
+    "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
