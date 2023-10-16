@@ -25,6 +25,33 @@ $light-dark: #1f1f1f;
 }
 
 /* 
+ * Mixins
+ */
+@mixin underline-animation($thickness: 2px) {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0%;
+    background: $bright-yellow;
+    content: "";
+    color: transparent;
+    height: $thickness;
+    transition: all 0.3s ease-in;
+  }
+
+  &:hover {
+    color: $bright-yellow;
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+/* 
  * Animations
  */
 @keyframes fadeIn {
@@ -187,8 +214,13 @@ $light-dark: #1f1f1f;
 .about-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   min-height: 100vh;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; // by default
+  }
 }
 
 .about-header {
@@ -204,6 +236,10 @@ $light-dark: #1f1f1f;
   margin-top: 10vh;
   margin-bottom: max(2rem, 3vh);
   padding: 1rem 4rem;
+
+  > a {
+    @include underline-animation(4px);
+  }
 
   @media (max-width: 768px) {
     font-size: 1.8rem;
@@ -246,6 +282,7 @@ $light-dark: #1f1f1f;
   display: flex;
   flex-direction: column;
   min-height: 90vh;
+  text-align: center;
   align-items: center;
   justify-content: center;
 

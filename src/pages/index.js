@@ -1,5 +1,5 @@
 import * as React from "react";
-// import { Link } from "gatsby";
+import { Link } from "gatsby";
 import Layout from "../components/layout";
 import RoughNotation from "../components/roughNotation";
 import Seo from "../components/seo";
@@ -48,15 +48,37 @@ const IndexPage = () => (
     </main>
     <div className="gradient-container">
       <section id="about" className="about-container">
-        <header className="about-header">about</header>
-        <p className="about-text">{about}</p>
-        <header className="about-header-right">projects</header>
-        <p className="about-text-right">{projects}</p>
+        <div>
+          <header className="about-header">
+            <Link to="/about">about</Link>
+          </header>
+          <p className="about-text">{about}</p>
+        </div>
+        <div>
+          <header className="about-header-right">
+            <Link to="/projects">projects</Link>
+          </header>
+          <p className="about-text-right">{projects}</p>
+        </div>
       </section>
       <ul id="contact" className="link-container">
-        <section className="link-header">Link Tree</section>
+        <section
+          className="link-header"
+          data-sal="fade"
+          data-sal-duration="500"
+          data-sal-delay="0"
+        >
+          Link Tree
+        </section>
         {linkTree.map((link) => (
-          <a key={link.url} className="link-item" href={`${link.url}`}>
+          <a
+            key={link.url}
+            className="link-item"
+            href={`${link.url}`}
+            data-sal="fade"
+            data-sal-duration="500"
+            data-sal-delay="0"
+          >
             <div className="link-text">{link.text}</div>
           </a>
         ))}

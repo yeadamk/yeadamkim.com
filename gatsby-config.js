@@ -19,10 +19,14 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-mdx`,
     `gatsby-plugin-offline`,
+    `gatsby-plugin-anchor-links`,
     {
-      resolve: "gatsby-plugin-anchor-links",
+      resolve: `gatsby-plugin-scroll-reveal`,
       options: {
-        duration: 0,
+        threshold: 1,
+        once: true,
+        disable: false,
+        selector: `[data-sal]`,
       },
     },
     {

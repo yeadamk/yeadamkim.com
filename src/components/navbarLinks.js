@@ -25,7 +25,7 @@ const NavItem = styled(Link).attrs((props) => ({
     right: 0;
     width: 0%;
     background: goldenrod;
-    content: ".";
+    content: "";
     color: transparent;
     height: 2px;
     transition: all 0.3s ease-in;
@@ -98,16 +98,19 @@ const NavAnchorItem = styled(AnchorLink).attrs((props) => ({
 const NavbarLinks = () => {
   return (
     <React.Fragment>
-      <NavItem to="/" activeClassName="active" className="clickable">
+      <NavItem to="/" activeClassName="active">
         home
       </NavItem>
-      <NavItem to="/about" activeClassName="active" className="clickable">
+      {/* <NavItem to="/about" activeClassName="active">
         about
-      </NavItem>
-      <NavItem to="/projects" activeClassName="active" className="clickable">
+      </NavItem> */}
+      <NavAnchorItem to="/#about" stripHash>
+        about
+      </NavAnchorItem>
+      <NavItem to="/projects" activeClassName="active">
         projects
       </NavItem>
-      <NavAnchorItem to="/#contact" stripHash className="clickable">
+      <NavAnchorItem to="/#contact" stripHash>
         contact
       </NavAnchorItem>
     </React.Fragment>
