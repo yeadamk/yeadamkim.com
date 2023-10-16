@@ -42,7 +42,7 @@ function Seo({ title, description, author, children }) {
       <meta name="author" content={seo.author} />
       <meta name="keywords" content={seo.keywords} />
 
-      {/* Canonical URLs */}
+      {/* Canonical Tags */}
       <link rel="canonical" href={seo.homeUrl} />
 
       {/* Social Media */}
