@@ -43,8 +43,7 @@ function Seo({ title, description, author, children }) {
       <meta name="keywords" content={seo.keywords} />
 
       {/* Canonical URLs */}
-      <link rel="canonical" href="https://yeadamkim.netlify.app" />
-      <link rel="canonical" href="https://main--yeadamkim.netlify.app" />
+      <link rel="canonical" href={seo.homeUrl} />
 
       {/* Social Media */}
       <meta property="og:title" content={seo.title} />
