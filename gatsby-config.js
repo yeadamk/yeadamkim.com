@@ -15,7 +15,6 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     `react-rough-notation`,
-    `babel-plugin-styled-components`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-mdx`,
     `gatsby-plugin-offline`,
