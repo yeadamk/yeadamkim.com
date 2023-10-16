@@ -62,23 +62,9 @@ const IndexPage = () => (
         </div>
       </section>
       <ul id="contact" className="link-container">
-        <section
-          className="link-header"
-          data-sal="fade"
-          data-sal-duration="500"
-          data-sal-delay="0"
-        >
-          Link Tree
-        </section>
+        <section className="link-header">Link Tree</section>
         {linkTree.map((link) => (
-          <a
-            key={link.url}
-            className="link-item"
-            href={`${link.url}`}
-            data-sal="fade"
-            data-sal-duration="500"
-            data-sal-delay="0"
-          >
+          <a key={link.url} className="link-item" href={`${link.url}`}>
             <div className="link-text">{link.text}</div>
           </a>
         ))}

@@ -21,14 +21,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-anchor-links`,
     {
-      resolve: `gatsby-plugin-scroll-reveal`,
-      options: {
-        threshold: 1,
-        once: true,
-        disable: false,
-      },
-    },
-    {
       resolve: `gatsby-plugin-sass`,
       options: {
         implementation: require("sass"),
