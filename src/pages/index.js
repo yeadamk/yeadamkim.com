@@ -9,7 +9,7 @@ const about =
   "I'm a third-year Mathematics of Computation major at UCLA.\n\nWhile actively exploring various career opportunities at the moment, I'm particularly passionate in the field of software engineering. I love to work on personal projects on the side, tinker around with my linux terminal, and watch fun tech videos on YouTube. With a strong foundation in mathematics and computer science, I hope to pursue a software engineering career upon graduation. Apart from academics, I also enjoy playing various sports (e.g. soccer, badminton, volleyball, and more), and have great interest in jazz piano.";
 
 const projects =
-  "In completion of this website, I will post all of my past projects here to present the works I've been doing along the way.\n\nThank you for visiting!";
+  "I am planning to post my past projects here in the future. In the mean time, you can check out my GitHub below. The link is provided under the link tree section.\n\nThank you for visiting!";
 
 const linkTree = [
   {
