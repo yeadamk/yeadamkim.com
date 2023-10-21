@@ -104,14 +104,14 @@ const NavbarLinks = () => {
       {/* <NavItem to="/about" activeClassName="active">
         about
       </NavItem> */}
-      <NavAnchorItem to="/#about" stripHash>
+      <NavItem to="/about">
         about
-      </NavAnchorItem>
+      </NavItem>
       <NavItem to="/projects" activeClassName="active">
         projects
       </NavItem>
       <NavAnchorItem to="/#contact" stripHash>
-        contact
+        contacts
       </NavAnchorItem>
     </React.Fragment>
   );

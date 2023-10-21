@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from "gatsby";
  * query data from gatsby-config.js
  */
 function Seo({ title, description, author, children }) {
-  const site = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query SiteMetadataQuery {
       site {
         siteMetadata {
@@ -27,12 +27,14 @@ function Seo({ title, description, author, children }) {
   `);
 
   const seo = {
-    title: title || site.siteMetadata?.title || "",
-    description: description || site.siteMetadata?.description || "",
-    author: author || site.siteMetadata?.author || "",
-    keywords: site.siteMetadata?.keywords || "",
-    homeUrl: site.siteMetadata?.siteUrl || "/",
+    title: title || data.site.siteMetadata?.title || "no",
+    description: description || data.site.siteMetadata?.description || "",
+    author: author || data.site.siteMetadata?.author || "",
+    keywords: data.site.siteMetadata?.keywords || "",
+    homeUrl: data.site.siteMetadata?.siteUrl || "/",
   };
+
+  console.log(seo.title);
 
   return (
     <React.Fragment>

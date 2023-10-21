@@ -1,7 +1,4 @@
-/* 
- * Color variables
- */
-$bright-yellow: rgb(210, 167, 58);
+@import "color-vars";
 
 /* 
  * Page specific styles
@@ -12,7 +9,7 @@ $bright-yellow: rgb(210, 167, 58);
   grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
   align-items: center;
   justify-items: center;
-  background-color: $bright-yellow;
+  background-color: $dark-yellow;
   min-height: 90vh;
 
   @media (max-height: 300px) {

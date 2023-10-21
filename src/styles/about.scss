@@ -1,8 +1,41 @@
-/* 
- * Color variables
- */
-$bright-yellow: rgb(210, 167, 58);
+@import "color-vars";
+@import "animations";
 
 /* 
  * Page specific styles
  */
+.about-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 90vh;
+  background: linear-gradient(135deg, $sky-blue 0%, $light-blue 100%);
+}
+
+.about-page-header {
+  color: black;
+  font-family: Lato-Black, Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  text-align: left;
+  margin-top: max(1rem, 5vh);
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+}
+
+.about-page-text {
+  white-space: pre-line;
+  color: black;
+  text-align: left;
+  font-family: Lato-Regular, Arial, Helvetica, sans-serif;
+  font-size: 1.7rem;
+  max-width: 60ch;
+  padding: 2rem;
+  margin-bottom: max(1rem, 3vh);
+
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+  }
+}

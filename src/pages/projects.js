@@ -6,7 +6,7 @@ import "../styles/index.scss"; // change to projects.scss
 
 const ProjectsPage = () => (
   <Layout>
-    <div className="hero-container">
+    <div className="hero-container fadeIn">
       <h1 className="hero-text">
         <RoughNotation
           className="hero-name"
@@ -21,5 +21,5 @@ const ProjectsPage = () => (
   </Layout>
 );
 
-export const Head = () => <Seo description="Yeadam's projects page"/>;
+export const Head = () => <Seo description="Yeadam's projects page" />;
 export default ProjectsPage;
