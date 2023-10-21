@@ -1,0 +1,79 @@
+@import "color-vars";
+
+/* 
+ * Page specific styles
+ */
+.link-background-container {
+  background: linear-gradient(180deg, $primary-color 0%, $dark 100%);
+}
+
+.link-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+
+  @media (max-width: 768px) {
+    height: 80vh;
+    padding-bottom: 0;
+  }
+}
+
+.link-page-header {
+  display: block;
+  font-family: PixelifySans, Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: max(1rem, 5vh);
+  margin-bottom: max(0.8rem, 3vh);
+
+  @media (max-width: 768px) {
+    font-size: 2.3rem;
+  }
+}
+
+.link-page-item {
+  display: block;
+  background-color: white;
+  border-radius: 2rem;
+  width: 70%;
+  text-align: center;
+  margin: 1.1rem auto;
+  padding: 1rem 2rem;
+  transition: all 0.25s;
+
+  &:hover {
+    background-color: $dark;
+    color: white;
+    transition: all 0s;
+  }
+
+  &:last-child {
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 1024px) {
+    margin: 1.1rem auto;
+    padding: 0.5rem 1rem;
+  }
+
+  @media (max-width: 768px) {
+    margin: 1.1rem auto;
+    padding: 0.5rem 0.8rem;
+  }
+
+  @media (max-height: 650px) {
+    padding: 0.5rem 2rem;
+  }
+}
+
+.link-page-text {
+  font-family: PixelifySans, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}

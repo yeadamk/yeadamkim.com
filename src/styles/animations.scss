@@ -3,8 +3,8 @@
  */
 .fadeIn {
   opacity: 0;
-  animation: fadeIn 1s ease-in 200ms;
-  -webkit-animation: fadeIn 1s ease-in 200ms;
+  animation: fadeIn 0.5s ease-in 200ms;
+  -webkit-animation: fadeIn 0.5s ease-in 200ms;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }

@@ -61,14 +61,14 @@ const IndexPage = () => (
           <p className="about-text-right">{projects}</p>
         </div>
       </section>
-      <ul id="contact" className="link-container">
-        <section className="link-header">Link Tree</section>
+      <section id="contact" className="link-container">
+        <header className="link-header">Link Tree</header>
         {linkTree.map((link) => (
           <a key={link.url} className="link-item" href={`${link.url}`}>
             <div className="link-text">{link.text}</div>
           </a>
         ))}
-      </ul>
+      </section>
     </div>
   </Layout>
 );

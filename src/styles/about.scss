@@ -4,13 +4,16 @@
 /* 
  * Page specific styles
  */
+.about-background-container {
+  background: linear-gradient(135deg, $sky-blue 0%, $light-blue 100%);
+}
+
 .about-page-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   min-height: 90vh;
-  background: linear-gradient(135deg, $sky-blue 0%, $light-blue 100%);
 }
 
 .about-page-header {

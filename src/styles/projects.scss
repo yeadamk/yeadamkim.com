@@ -3,3 +3,37 @@
 /* 
  * Page specific styles
  */
+ .projects-background-container {
+  background-color: $dark-yellow;
+}
+
+.projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: DMSerifDisplay, Arial, Helvetica, sans-serif;
+  background-color: $dark-yellow;
+  min-height: 90vh;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
+  @media (max-width: 768px) {
+    min-height: auto;
+    height: 90vh;
+  }
+}
+
+.projects-text {
+  color: black;
+  position: relative;
+  font-weight: 600;
+  text-align: center;
+  font-size: max(3.7rem, 10vmin);
+  padding: 2.2rem;
+
+  @media (max-width: 564px) {
+    font-size: 2.5rem;
+  }
+}
