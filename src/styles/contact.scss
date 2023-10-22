@@ -65,6 +65,10 @@
   @media (max-width: 768px) {
     margin: 1.1rem auto;
     padding: 0.5rem 0.8rem;
+
+    &:last-child {
+      margin-bottom: 4rem;
+    }
   }
 
   @media (max-height: 650px) {
