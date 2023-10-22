@@ -6,9 +6,6 @@ import "../styles/pages/about.scss";
 
 const aboutHeader = "Hello there?";
 
-export const about =
-  "I'm a third-year Mathematics of Computation major at UCLA.\n\nWhile actively exploring various career opportunities at the moment, I'm particularly passionate in the field of software engineering. I love to work on personal projects on the side, tinker around with my linux terminal, and keep up with the latest tech videos on YouTube. With a strong foundation in mathematics and computer science, I hope to pursue a software engineering career upon graduation. Apart from academics, I also enjoy playing various sports (e.g. soccer, badminton, volleyball, and more), and have great interest in jazz piano.";
-
 const AboutPage = () => (
   <Layout>
     <section className="about-background-container">
