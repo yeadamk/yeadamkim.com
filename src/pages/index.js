@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import RoughNotation from "../components/roughNotation";
 import Seo from "../components/seo";
 import "../styles/pages/index.scss";
-import about from "about"
+import about from "./about"
 
 const projects =
   "I am planning to post my past projects here in the future. In the mean time, you can check out my GitHub below. The link is provided under the link tree section.\n\nThank you for visiting!";
