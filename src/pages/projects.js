@@ -10,15 +10,14 @@ const ProjectsPage = () => (
     <section className="projects-background-container">
       <div className="projects-container fadeIn">
         <h1 className="projects-text">
-          <RoughNotation
-            content="Will post them soon"
-            type="box"
-            color="black"
-            width="3"
-            delay="500"
-          />
+          Will&nbsp;post them&nbsp;soon
           <br />
-          ._.
+          <p className="check-github">
+            In the meantime, check&nbsp;my&nbsp;
+            <a href="https://github.com/yeadamk" rel="GitHub">
+              <u>GitHub</u>
+            </a>
+          </p>
         </h1>
       </div>
     </section>

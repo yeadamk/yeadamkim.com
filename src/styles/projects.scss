@@ -3,7 +3,7 @@
 /* 
  * Page specific styles
  */
- .projects-background-container {
+.projects-background-container {
   background-color: $dark-yellow;
 }
 
@@ -35,5 +35,17 @@
 
   @media (max-width: 564px) {
     font-size: 2.5rem;
+  }
+}
+
+.check-github {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: 1rem;
+
+  @media (max-width: 564px) {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
   }
 }
