@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link, graphql } from "gatsby";
 import BlogLayout from "../components/blog/blogLayout";
 import Seo from "../components/seo";
-import "../styles/blog-post.scss";
+import "../styles/pages/blog-post.scss";
 
 const BlogPostTemplate = ({
   data: { previous, next, markdownRemark: post },

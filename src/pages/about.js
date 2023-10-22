@@ -2,7 +2,7 @@ import * as React from "react";
 import RoughNotation from "../components/roughNotation";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import "../styles/about.scss";
+import "../styles/pages/about.scss";
 
 const aboutHeader = "Hello there?";
 

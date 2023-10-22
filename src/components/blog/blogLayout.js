@@ -1,7 +1,7 @@
 import * as React from "react";
 import Footer from "../footer";
-import "../../styles/reset.css";
-import "../../styles/global.scss";
+import "../../styles/global/reset.css";
+import "../../styles/global/global.scss";
 import BlogNavbar from "./blogNavbar";
 
 const BlogLayout = ({ children }) => {

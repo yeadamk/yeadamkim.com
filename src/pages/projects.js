@@ -1,8 +1,7 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import "../styles/index.scss";
-import "../styles/projects.scss";
+import "../styles/pages/projects.scss";
 
 const ProjectsPage = () => (
   <Layout>

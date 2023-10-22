@@ -1,4 +1,4 @@
-@import "color-vars";
+@import "../global/color-vars.scss";
 
 /* 
  * Page specific styles
@@ -67,7 +67,7 @@
     padding: 0.5rem 0.8rem;
 
     &:last-child {
-      margin-bottom: 4rem;
+      margin-bottom: 8rem;
     }
   }
 
