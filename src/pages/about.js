@@ -44,7 +44,7 @@ const AboutPage = () => (
             delay="2000"
           />
           . I love to work on personal projects on the side, tinker around with
-          my linux terminal, and watch fun tech videos on YouTube. With a strong
+          my linux terminal, and keep up with the latest tech videos on YouTube. With a strong
           foundation in{" "}
           <RoughNotation
             content="Mathematics and Computer Science"
