@@ -4,4 +4,4 @@
 
 Visit at [www.yeadamkim.com](https://www.yeadamkim.com)
 
-> Currently planning on adding content
+> Planning on adding content
