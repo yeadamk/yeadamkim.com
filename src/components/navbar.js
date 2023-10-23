@@ -79,7 +79,7 @@ const Hamburger = styled.div.attrs((props) => ({
   &::before,
   &::after {
     width: 30px;
-    height: 3.1px;
+    height: 3.2px;
     background-color: #111;
     content: "";
     position: absolute;
@@ -207,7 +207,11 @@ const Navbar = () => {
         />
       </LogoWrap>
       <Toggle className="clickable" onClick={() => setNavbarOpen(!navbarOpen)}>
-        {navbarOpen ? <Hamburger open className="clickable" /> : <Hamburger />}
+        {navbarOpen ? (
+          <Hamburger open className="clickable" />
+        ) : (
+          <Hamburger className="clickable" />
+        )}
       </Toggle>
       {navbarOpen ? (
         <Navbox>
