@@ -42,6 +42,15 @@
       width: 100%;
     }
   }
+
+  @media (hover: none) {
+    &:hover {
+      color: inherit;
+      &::after {
+        width: 0%;
+      }
+    }
+  }
 }
 
 /* 
@@ -257,14 +266,21 @@
   padding: 1rem 2rem;
   transition: all 0.25s;
 
+  &:last-child {
+    margin-bottom: 2rem;
+  }
+
   &:hover {
     background-color: $dark;
     color: white;
     transition: all 0s;
   }
 
-  &:last-child {
-    margin-bottom: 2rem;
+  @media (hover: none) {
+    &:hover {
+      color: inherit;
+      background-color: white;
+    }
   }
 
   @media (max-width: 1024px) {
