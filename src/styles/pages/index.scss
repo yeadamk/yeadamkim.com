@@ -29,7 +29,7 @@
     left: 0;
     right: 0;
     width: 0%;
-    background: $dark-yellow;
+    background-color: white;
     content: "";
     color: transparent;
     height: $thickness;
@@ -37,7 +37,6 @@
   }
 
   &:hover {
-    color: $dark-yellow;
     &::after {
       width: 100%;
     }
@@ -45,7 +44,6 @@
 
   @media (hover: none) {
     &:hover {
-      color: inherit;
       &::after {
         width: 0%;
       }
