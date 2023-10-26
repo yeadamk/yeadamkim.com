@@ -26,7 +26,7 @@
 }
 
 .projects-text {
-  color: black;
+  color: $light-blue;
   position: relative;
   font-weight: 600;
   text-align: center;
@@ -47,11 +47,28 @@
   .other-text {
     display: inline;
     transition: opacity 1s;
+
+    background: -webkit-linear-gradient(
+      45deg,
+      #c5ebff 16.666%,
+      #b8e4fb 16.666%,
+      #c9e7f8 33.333%,
+      #ace3fb 33.333%,
+      #c4e6f8 50%,
+      #c6e3ff 50%,
+      #c5ebff 66.666%,
+      #c5ebff 66.666%,
+      #b7e4fc 80.333%,
+      #c5ebff 80.333%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .github-text {
     display: inline;
     position: relative;
+    color: $light-light-blue;
     font-family: Monarda, Arial, Helvetica, sans-serif;
     font-size: 120%;
     transition: color 300ms;
