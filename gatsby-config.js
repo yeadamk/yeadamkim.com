@@ -19,6 +19,7 @@ module.exports = {
     `gatsby-plugin-mdx`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-anchor-links`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-sass`,
       options: {
