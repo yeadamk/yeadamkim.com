@@ -1,4 +1,12 @@
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+**/.git
+**/.svn
+**/.hg
 .cache
 package.json
 package-lock.json
 public
+static
