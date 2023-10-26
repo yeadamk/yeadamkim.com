@@ -100,90 +100,23 @@ const Hamburger = styled.div.attrs((props) => ({
 `;
 
 const LogoWrap = styled.div`
+  @import "../styles/global/animations.scss";
+
   margin: auto 0;
   flex: 0 1 2.5rem;
 
-  animation-name: wiggle;
-  -webkit-animation-name: wiggle;
+  animation-name: spin;
+  -webkit-animation-name: spin;
 
   animation-fill-mode: both
   -webkit-animation-fill-mode: both;
 
-  animation-duration: 0.8s;
-  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 
   @media (max-width: 768px) {
     flex: 0 1 2.5rem;
     margin: auto .5rem;
-  }
-
-  @keyframes wiggle {
-    from {
-      -webkit-transform: none;
-      transform: none
-    }
-
-    20% {
-      -webkit-transform: translate3d(-13%,0,0) rotate3d(0,0,1,-10deg);
-      transform: translate3d(-13%,0,0) rotate3d(0,0,1,-10deg)
-    }
-
-    40% {
-      -webkit-transform: translate3d(12%,0,0) rotate3d(0,0,1,5deg);
-      transform: translate3d(12%,0,0) rotate3d(0,0,1,5deg)
-    }
-
-    60% {
-      -webkit-transform: translate3d(-10%,0,0) rotate3d(0,0,1,-3deg);
-      transform: translate3d(-10%,0,0) rotate3d(0,0,1,-3deg)
-    }
-
-    80% {
-      -webkit-transform: translate3d(8%,0,0) rotate3d(0,0,1,2deg);
-      transform: translate3d(8%,0,0) rotate3d(0,0,1,2deg)
-    }
-
-    to {
-      -webkit-transform: none;
-      transform: none
-    }
-  }
-
-  @-webkit-keyframes wiggle {
-    from {
-      -webkit-transform: none;
-      transform: none
-    }
-
-    15% {
-      -webkit-transform: translate3d(-20%,0,0) rotate3d(0,0,1,-8deg);
-      transform: translate3d(-20%,0,0) rotate3d(0,0,1,-8deg)
-    }
-
-    30% {
-      -webkit-transform: translate3d(10%,0,0) rotate3d(0,0,1,5deg);
-      transform: translate3d(10%,0,0) rotate3d(0,0,1,7deg)
-    }
-
-    45% {
-      -webkit-transform: translate3d(-15%,0,0) rotate3d(0,0,1,-5deg);
-      transform: translate3d(-15%,0,0) rotate3d(0,0,1,-5deg)
-    }
-
-    60% {
-      -webkit-transform: translate3d(10%,0,0) rotate3d(0,0,1,2deg);
-      transform: translate3d(10%,0,0) rotate3d(0,0,1,2deg)
-    }
-
-    75% {
-      -webkit-transform: translate3d(-5%,0,0) rotate3d(0,0,1,-2deg);
-      transform: translate3d(-5%,0,0) rotate3d(0,0,1,-2deg)
-    }
-
-    to {
-      -webkit-transform: none;
-      transform: none
-    }
   }
 `;
 
