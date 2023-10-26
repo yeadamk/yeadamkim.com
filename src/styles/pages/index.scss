@@ -172,6 +172,10 @@
     font-size: 1.8rem;
   }
 
+  @media (max-width: 425px) {
+    margin-top: 0;
+  }
+
   @media (max-width: 375px) {
     font-size: 1.3rem;
     padding: 1rem 3rem;
