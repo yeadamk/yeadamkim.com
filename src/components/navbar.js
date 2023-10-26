@@ -8,7 +8,7 @@ const Navigation = styled.nav`
   position: relative;
   display: flex;
   font-family: DMSerifDisplay, Arial, Helvetica, sans-serif;
-  height: max(3.5rem, 10vh);
+  height: max(4rem, 10vh);
   background-color: white;
   justify-content: space-between;
   transition: background-color 0.3s ease-in;
@@ -21,7 +21,7 @@ const Navigation = styled.nav`
 
   @media (max-width: 768px) {
     position: sticky;
-    height: max(3.5rem, 10vh);
+    height: max(3.7rem, 10vh);
     top: 0;
     left: 0;
     right: 0;
@@ -60,7 +60,7 @@ const Navbox = styled.div.attrs((props) => ({
     padding-top: 10vh;
     background-color: #fff;
     transition: all 0.2s ease-in;
-    top: max(3.5rem, 10vh);
+    top: max(3.7rem, 10vh);
     left: ${(props) => (props.open ? "-100%" : "0")};
   }
 `;
@@ -109,7 +109,7 @@ const LogoWrap = styled.div`
   animation-fill-mode: both
   -webkit-animation-fill-mode: both;
 
-  animation-duration: 0.7s;
+  animation-duration: 0.8s;
   animation-timing-function: linear;
 
   @media (max-width: 768px) {
@@ -124,23 +124,23 @@ const LogoWrap = styled.div`
     }
 
     20% {
-      -webkit-transform: translate3d(-10%,0,0) rotate3d(0,0,1,-5deg);
-      transform: translate3d(-10%,0,0) rotate3d(0,0,1,-5deg)
+      -webkit-transform: translate3d(-13%,0,0) rotate3d(0,0,1,-10deg);
+      transform: translate3d(-13%,0,0) rotate3d(0,0,1,-10deg)
     }
 
     40% {
-      -webkit-transform: translate3d(10%,0,0) rotate3d(0,0,1,3deg);
-      transform: translate3d(10%,0,0) rotate3d(0,0,1,3deg)
+      -webkit-transform: translate3d(12%,0,0) rotate3d(0,0,1,5deg);
+      transform: translate3d(12%,0,0) rotate3d(0,0,1,5deg)
     }
 
     60% {
-      -webkit-transform: translate3d(-7%,0,0) rotate3d(0,0,1,-3deg);
-      transform: translate3d(-7%,0,0) rotate3d(0,0,1,-3deg)
+      -webkit-transform: translate3d(-10%,0,0) rotate3d(0,0,1,-3deg);
+      transform: translate3d(-10%,0,0) rotate3d(0,0,1,-3deg)
     }
 
     80% {
-      -webkit-transform: translate3d(7%,0,0) rotate3d(0,0,1,2deg);
-      transform: translate3d(7%,0,0) rotate3d(0,0,1,2deg)
+      -webkit-transform: translate3d(8%,0,0) rotate3d(0,0,1,2deg);
+      transform: translate3d(8%,0,0) rotate3d(0,0,1,2deg)
     }
 
     to {

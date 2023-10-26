@@ -10,7 +10,7 @@
   align-items: center;
   justify-items: center;
   background-color: $dark-yellow;
-  min-height: 90vh;
+  min-height: max(90vh, 30rem);
 
   @media (max-height: 300px) {
     display: none;

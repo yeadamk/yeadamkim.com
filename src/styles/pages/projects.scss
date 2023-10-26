@@ -1,10 +1,11 @@
 @import "../global/color-vars.scss";
+@import "../global/animations.scss";
 
 /* 
  * Page specific styles
  */
 .projects-background-container {
-  background-color: $dark-yellow;
+  background: linear-gradient(135deg, $mid-blue 0%, $dark-blue 100%);
 }
 
 .projects-container {
@@ -12,8 +13,7 @@
   align-items: center;
   justify-content: center;
   font-family: DMSerifDisplay, Arial, Helvetica, sans-serif;
-  background-color: $dark-yellow;
-  min-height: 90vh;
+  min-height: max(90vh, 30rem);
 
   user-select: none;
   -webkit-user-select: none;
@@ -30,22 +30,69 @@
   position: relative;
   font-weight: 600;
   text-align: center;
-  font-size: max(3.7rem, 10vmin);
+  font-size: 4rem;
   padding: 2.2rem;
+  pointer-events: none;
 
-  @media (max-width: 564px) {
-    font-size: 2.5rem;
+  &:hover {
+    .other-text {
+      opacity: 20%;
+    }
+
+    .github-text {
+      color: rgb(173, 184, 236);
+    }
   }
-}
 
-.check-github {
-  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 1.2rem;
-  font-style: italic;
-  margin-top: 1rem;
+  .other-text {
+    display: inline;
+    transition: opacity 1s;
+  }
 
-  @media (max-width: 564px) {
-    font-size: 1.1rem;
-    margin-top: 1.5rem;
+  .github-text {
+    display: inline;
+    position: relative;
+    font-family: Monarda, Arial, Helvetica, sans-serif;
+    font-size: 120%;
+    transition: color 300ms;
+    pointer-events: auto;
+    @include reverse-underline-animation(4px, $light_purple, 0.7rem);
+  }
+
+  .new-tab-icon {
+    position: absolute;
+    top: 3rem;
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 3rem;
+
+    .new-tab-icon {
+      top: 2rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    font-size: 2.5rem;
+
+    .new-tab-icon {
+      top: 1.7rem;
+      font-size: 1rem;
+    }
+  }
+
+  @media (hover: none) {
+    &:hover {
+      transition: none;
+
+      .other-text {
+        opacity: 1;
+      }
+
+      .github-text {
+        color: inherit;
+      }
+    }
   }
 }

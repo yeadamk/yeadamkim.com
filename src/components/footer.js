@@ -10,7 +10,7 @@ const FooterLayout = styled.div`
   justify-content: space-between;
   align-items: center;
   font-family: DMSerifDisplay, Arial, Helvetica, sans-serif;
-  height: max(3.5rem, 10vh);
+  height: max(3.7rem, 10vh);
   background-color: #1e1e1e;
   color: white;
   font-size: 1.2rem;

@@ -10,7 +10,7 @@
 .link-page-container {
   display: flex;
   flex-direction: column;
-  min-height: 90vh;
+  min-height: max(90vh, 30rem);
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -34,6 +34,10 @@
 
   @media (max-width: 768px) {
     font-size: 2.3rem;
+  }
+
+  @media (max-height: 768px) {
+    margin-top: max(5rem, 5vh);
   }
 }
 

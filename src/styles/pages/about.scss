@@ -5,7 +5,7 @@
  * Page specific styles
  */
 .about-background-container {
-  background: linear-gradient(135deg, $sky-blue 0%, $light-blue 100%);
+  background: linear-gradient(135deg, $bright-yellow 0%, $light-light-blue 1%, $light-blue 95%, $sky-blue 100%);
 }
 
 .about-page-container {
@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: 90vh;
+  min-height: max(90vh, 30rem);
 }
 
 .about-page-header {
@@ -21,9 +21,14 @@
   font-family: Lato-Black, Arial, Helvetica, sans-serif;
   font-size: 2.5rem;
   text-align: left;
-  margin-top: max(1rem, 5vh);
+  margin-top: max(1rem, 3vh);
 
   @media (max-width: 768px) {
+    margin-top: max(1.5rem, 8vh);
+    font-size: 1.8rem;
+  }
+
+  @media (max-height: 768px) {
     margin-top: max(1.5rem, 8vh);
     font-size: 1.8rem;
   }

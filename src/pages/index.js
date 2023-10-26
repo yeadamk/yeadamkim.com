@@ -9,7 +9,7 @@ const about =
   "I'm a third-year Mathematics of Computation major at UCLA.\n\nWhile actively exploring various career opportunities at the moment, I'm particularly passionate in the field of software engineering. I love to work on personal projects on the side, tinker around with my linux terminal, and keep up with the latest tech videos on YouTube. With a strong foundation in mathematics and computer science, I hope to pursue a software engineering career upon graduation. Apart from academics, I also enjoy playing various sports (e.g. soccer, badminton, volleyball, and more), and have great interest in jazz piano.";
 
 const projects =
-  "I am planning to post my past projects here in the future. In the mean time, you can check out my GitHub below. The link is provided under the link tree section.\n\nThank you for visiting!";
+  "Every day, my passion in software engineering is fueled by working on personal projects. I like to experiment with my code, such as implementing stdlib functions in C or making python/bash scripts for mundane tasks. For my experimental projects, I typically like to keep them private, but if you want to check out my public repos, you can find them at my GitHub!\n\nThank you for visiting!";
 
 const linkTree = [
   {
@@ -47,6 +47,7 @@ const IndexPage = () => (
       </h1>
     </main>
     <div className="gradient-container">
+      {/* About */}
       <section id="about" className="about-container">
         <div>
           <header className="about-header">
@@ -61,6 +62,7 @@ const IndexPage = () => (
           <p className="about-text-right">{projects}</p>
         </div>
       </section>
+      {/* Link Tree */}
       <section id="contact" className="link-container">
         <header className="link-header">Link Tree</header>
         {linkTree.map((link) => (

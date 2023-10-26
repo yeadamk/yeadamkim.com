@@ -2,7 +2,7 @@
   "name": "yeadamkim.com",
   "private": true,
   "description": "Yeadam's personal website",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Yeadam Kim",
   "dependencies": {
     "babel-plugin-styled-components": "^2.1.4",

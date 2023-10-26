@@ -2,20 +2,24 @@ import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import "../styles/pages/projects.scss";
+import { MdOpenInNew } from "react-icons/md";
 
 const ProjectsPage = () => (
   <Layout>
     <section className="projects-background-container">
       <div className="projects-container fadeIn">
         <h1 className="projects-text">
-          Will&nbsp;post them&nbsp;soon
+          <p className="other-text">Check&nbsp;out&nbsp;my </p>
+          <a
+            href="https://github.com/yeadamk"
+            rel="GitHub"
+            target="_blank"
+            className="github-text"
+          >
+            GitHub
+            <MdOpenInNew className="new-tab-icon" />
+          </a>
           <br />
-          <p className="check-github">
-            In the meantime, check&nbsp;my&nbsp;
-            <a href="https://github.com/yeadamk" rel="GitHub">
-              <u>GitHub</u>
-            </a>
-          </p>
         </h1>
       </div>
     </section>

@@ -47,3 +47,71 @@
     transform: translate3d(0, 50%, 0);
   }
 }
+
+/* 
+ * Mixins
+ */
+@mixin underline-animation($thickness: 2px, $color: white, $bottom: -2px) {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: $bottom;
+    left: 0;
+    right: 0;
+    width: 0%;
+    background-color: $color;
+    content: "";
+    color: transparent;
+    height: $thickness;
+    transition: all 0.3s ease-in;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+
+  @media (hover: none) {
+    &:hover {
+      &::after {
+        width: 0%;
+      }
+    }
+  }
+}
+
+@mixin reverse-underline-animation($thickness: 2px, $color: white, $bottom: -2px) {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: $bottom;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: $color;
+    content: "";
+    color: transparent;
+    height: $thickness;
+    transition: transform 0.2s ease-in;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+
+  &:hover {
+    &::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+
+  @media (hover: none) {
+    &:hover {
+      &::after {
+        width: 0%;
+      }
+    }
+  }
+}
