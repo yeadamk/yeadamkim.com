@@ -9,7 +9,7 @@ const NavItem = styled(Link).attrs((props) => ({
   color: #111111;
   display: flex;
   align-items: center;
-  font-size: 1.125rem;
+  font-size: 1.2rem;
   font-family: Lato-Regular, Arial, Helvetica, sans-serif;
   text-transform: lowercase;
   font-weight: 600;
@@ -20,15 +20,15 @@ const NavItem = styled(Link).attrs((props) => ({
 
   &::after {
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     right: 0;
     width: 0%;
     background: goldenrod;
     content: "";
     color: transparent;
-    height: 2px;
-    transition: all 0.3s ease-in;
+    height: 2.5px;
+    transition: width 0.3s ease-in;
   }
 
   &:hover {
@@ -46,6 +46,14 @@ const NavItem = styled(Link).attrs((props) => ({
     padding: 1.2rem 0;
     font-size: 1.5rem;
     z-index: 7;
+    transition: color 0s;
+
+    &:hover {
+      &::after {
+        display: none;
+        transition: none;
+      }
+    }
   }
 `;
 
@@ -101,14 +109,15 @@ const NavbarLinks = () => {
       <NavItem to="/" activeClassName="active">
         home
       </NavItem>
-      {/* <NavItem to="/about" activeClassName="active">
+      <NavItem to="/about" activeClassName="active">
         about
-      </NavItem> */}
-      <NavItem to="/about">about</NavItem>
+      </NavItem>
       <NavItem to="/projects" activeClassName="active">
         projects
       </NavItem>
-      <NavItem to="/contact">contacts</NavItem>
+      <NavItem to="/contact" activeClassName="active">
+        contacts
+      </NavItem>
     </React.Fragment>
   );
 };
