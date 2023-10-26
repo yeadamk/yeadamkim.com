@@ -30,7 +30,10 @@
 
   @media (max-height: 768px) {
     margin-top: max(1.5rem, 8vh);
-    font-size: 1.8rem;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 1.6rem;
   }
 }
 
@@ -44,7 +47,15 @@
   padding: 2rem;
   margin-bottom: max(1rem, 3vh);
 
+  @media (max-width: 1024px) {
+    font-size: 1.8rem;
+  }
+
   @media (max-width: 768px) {
     font-size: 1.4rem;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 1.1rem;
   }
 }

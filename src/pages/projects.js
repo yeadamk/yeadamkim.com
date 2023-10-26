@@ -12,7 +12,7 @@ const ProjectsPage = () => (
           <p className="other-text">Check&nbsp;out&nbsp;my </p>
           <a
             href="https://github.com/yeadamk"
-            rel="GitHub"
+            rel="noreferrer"
             target="_blank"
             className="github-text"
           >

@@ -39,6 +39,11 @@
   @media (max-height: 768px) {
     margin-top: max(5rem, 5vh);
   }
+
+  @media (max-width: 375px) {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
 }
 
 .link-page-item {
@@ -91,4 +96,8 @@
   font-family: PixelifySans, Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
   text-transform: uppercase;
+
+  @media (max-width: 375px) {
+    font-size: 1.125rem;
+  }
 }
