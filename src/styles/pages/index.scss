@@ -25,7 +25,7 @@
 
   &::after {
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     right: 0;
     width: 0%;
@@ -39,6 +39,40 @@
   &:hover {
     &::after {
       width: 100%;
+    }
+  }
+
+  @media (hover: none) {
+    &:hover {
+      &::after {
+        width: 0%;
+      }
+    }
+  }
+}
+
+@mixin reverse-underline-animation($thickness: 2px) {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    content: "";
+    color: transparent;
+    height: $thickness;
+    transition: transform 0.2s ease-in;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+
+  &:hover {
+    &::after {
+      transform: scaleX(1);
+      transform-origin: left;
     }
   }
 
@@ -187,7 +221,7 @@
   padding: 1rem 4rem;
 
   > a {
-    @include underline-animation(4px);
+    @include reverse-underline-animation(4px);
   }
 
   @media (max-width: 768px) {
