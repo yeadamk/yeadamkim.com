@@ -9,7 +9,7 @@ const about =
   "I'm a third-year Mathematics of Computation major at UCLA.\n\nWhile actively exploring various career opportunities at the moment, I'm particularly passionate in the field of software engineering. I love to work on personal projects on the side, tinker around with my linux terminal, and keep up with the latest tech videos on YouTube. With a strong foundation in mathematics and computer science, I hope to pursue a software engineering career upon graduation. Apart from academics, I also enjoy playing various sports (e.g. soccer, badminton, volleyball, and more), and have great interest in jazz piano.";
 
 const projects =
-  "Every day, my passion in software engineering is fueled by working on personal projects. I like to experiment with my code, such as implementing stdlib functions in C or making python/bash scripts for mundane tasks. For my experimental projects, I typically like to keep them private, but if you want to check out my public repos, you can find them at my GitHub!\n\nThank you for visiting!";
+  "Every day, my passion in software engineering is fueled by working on personal projects. I like to experiment with my code, such as implementing stdlib functions in C or making python/bash scripts for automating mundane tasks. For my experimental projects, I typically like to keep them private, but if you want to check out my public repos, you can find them at my GitHub!\n\nThank you for visiting!";
 
 const linkTree = [
   {
