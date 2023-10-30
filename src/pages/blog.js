@@ -45,6 +45,9 @@ function BlogPage() {
 }
 
 export const Head = () => (
-  <Seo title="Yeadam Kim | Blog" description="Yeadam's blog page" />
+  <Seo
+    title="Yeadam Blogging"
+    description="A collection of somewhat random blog posts by Yeadam Kim."
+  />
 );
 export default BlogPage;

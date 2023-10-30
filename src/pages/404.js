@@ -21,7 +21,5 @@ const NotFoundPage = () => (
   </Layout>
 );
 
-export const Head = () => (
-  <Seo title="Page Not Found :(" description="404 page" />
-);
+export const Head = () => <Seo title="404: Not Found" />;
 export default NotFoundPage;

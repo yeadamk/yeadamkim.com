@@ -75,5 +75,6 @@ const IndexPage = () => (
   </Layout>
 );
 
+// Using default SEO from 'gatsby-config.js'
 export const Head = () => <Seo />;
 export default IndexPage;

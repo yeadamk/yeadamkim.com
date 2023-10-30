@@ -37,5 +37,7 @@ const ContactPage = () => (
   </Layout>
 );
 
-export const Head = () => <Seo description="Yeadam's contact page" />;
+export const Head = () => (
+  <Seo title="Yeadam Kim | contact"/>
+);
 export default ContactPage;

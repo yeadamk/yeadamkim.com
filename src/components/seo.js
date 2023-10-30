@@ -27,7 +27,7 @@ function Seo({ title, description, author, children }) {
   `);
 
   const seo = {
-    title: title || data.site.siteMetadata?.title || "no",
+    title: title || data.site.siteMetadata?.title || "Yeadam Kim",
     description: description || data.site.siteMetadata?.description || "",
     author: author || data.site.siteMetadata?.author || "",
     keywords: data.site.siteMetadata?.keywords || "",

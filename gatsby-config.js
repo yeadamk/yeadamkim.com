@@ -3,10 +3,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Yeadam Kim | Dev`,
-    description: `Yeadam Kim is a student at University of California, Los Angeles, studying mathematics and computer science.`,
+    title: `Yeadam Kim`,
+    description: `Yeadam Kim is an undergraduate at UCLA, studying mathematics and computer science.`,
     author: `Yeadam Kim`,
-    keywords: `Yeadam Kim, dev, personal website, portfolio`,
+    keywords: `Yeadam Kim, dev, developer, personal website, portfolio`,
     siteUrl: `https://www.yeadamkim.com`,
   },
   plugins: [

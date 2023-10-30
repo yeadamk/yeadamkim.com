@@ -26,5 +26,5 @@ const ProjectsPage = () => (
   </Layout>
 );
 
-export const Head = () => <Seo description="Yeadam's projects page" />;
+export const Head = () => <Seo title="Yeadam Kim | projects" />;
 export default ProjectsPage;

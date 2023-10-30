@@ -44,8 +44,8 @@ const AboutPage = () => (
             delay="2000"
           />
           . I love to work on personal projects on the side, tinker around with
-          my linux terminal, and keep up with the latest tech videos on YouTube. With a strong
-          foundation in{" "}
+          my linux terminal, and keep up with the latest tech videos on YouTube.
+          With a strong foundation in{" "}
           <RoughNotation
             content="Mathematics and Computer Science"
             type="highlight"
@@ -99,5 +99,5 @@ const AboutPage = () => (
   </Layout>
 );
 
-export const Head = () => <Seo description="Yeadam's about page" />;
+export const Head = () => <Seo title="Yeadam Kim | about" />;
 export default AboutPage;
