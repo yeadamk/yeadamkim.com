@@ -29,8 +29,10 @@ module.exports = {
             }
           }
           allSitePage(filter: {path: {glob: "!/blog/*"}}) {
-            nodes {
-              path
+            edges {
+              node {
+                path
+              }
             }
           }
           allFile {
@@ -39,10 +41,10 @@ module.exports = {
             }
           }
         }`,
-        serialize: ({ path, modifiedTime, allSitePage }) => {
-          allSitePage.nodes.map(() => {
+        serialize: ({ site, allSitePage, modifiedTime }) => {
+          allSitePage.edges.map(({ node }) => {
             return {
-              url: siteUrl + path,
+              url: site.siteMetadata.siteUrl + node.path,
               lastmod: modifiedTime,
             };
           });
