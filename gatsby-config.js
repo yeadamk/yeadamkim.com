@@ -39,7 +39,7 @@ module.exports = {
             }
           }
         }`,
-        serialize: ({ siteUrl, path, modifiedTime }) => {
+        serialize: ({ path, modifiedTime, allSitePage }) => {
           allSitePage.nodes.map(() => {
             return {
               url: siteUrl + path,
