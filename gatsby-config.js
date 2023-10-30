@@ -19,7 +19,35 @@ module.exports = {
     `gatsby-plugin-mdx`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-anchor-links`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        query: `{
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage(filter: {path: {glob: "!/blog/*"}}) {
+            nodes {
+              path
+            }
+          }
+          allFile {
+            nodes {
+              modifiedTime(formatString: "YYYY-MM-DD")
+            }
+          }
+        }`,
+        serialize: ({ path, modifiedTime }) => {
+          return {
+            url: siteUrl + path,
+            lastmod: modifiedTime,
+          };
+        },
+        createLinkInHead: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-sass`,
       options: {
