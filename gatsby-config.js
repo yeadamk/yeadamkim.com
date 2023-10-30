@@ -39,11 +39,13 @@ module.exports = {
             }
           }
         }`,
-        serialize: ({ path, modifiedTime }) => {
-          return {
-            url: siteUrl + path,
-            lastmod: modifiedTime,
-          };
+        serialize: ({ siteUrl, path, modifiedTime }) => {
+          allSitePage.nodes.map(() => {
+            return {
+              url: siteUrl + path,
+              lastmod: modifiedTime,
+            };
+          });
         },
         createLinkInHead: true,
       },
