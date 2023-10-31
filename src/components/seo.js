@@ -34,8 +34,6 @@ function Seo({ title, description, author, children }) {
     homeUrl: data.site.siteMetadata?.siteUrl || "/",
   };
 
-  console.log(seo.title);
-
   return (
     <React.Fragment>
       {/* Essential Meta Tags */}
