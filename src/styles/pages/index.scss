@@ -176,7 +176,7 @@
   padding: 1rem 4rem;
 
   > a {
-    @include reverse-underline-animation(4px);
+    @include underline-animation(5px, white, -3px, 250ms, 1s);
   }
 
   @media (max-width: 768px) {
