@@ -34,12 +34,12 @@ const IndexPage = () => (
   <Layout>
     <main className="hero-container">
       <h1 className="hero-text type-wrapper fadeIn">
-        Hi, my name's{" "}
+        <span className="hero-other-text">Hi, my name's </span>
         <RoughNotation
           content="Yeadam&nbsp;Kim"
           type="underline"
           color="black"
-          className="hero-name"
+          className="hero-name clickable"
           width="5"
           padding="0"
         />

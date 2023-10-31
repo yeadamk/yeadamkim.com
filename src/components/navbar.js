@@ -58,7 +58,7 @@ const Navbox = styled.div.attrs((props) => ({
     width: 100%;
     justify-content: flex-start;
     padding-top: 10vh;
-    background-color: #fff;
+    background-color: white;
     transition: all 0.2s ease-in;
     top: max(3.7rem, 10vh);
     left: ${(props) => (props.open ? "-100%" : "0")};

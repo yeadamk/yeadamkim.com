@@ -9,7 +9,7 @@ const ProjectsPage = () => (
     <section className="projects-background-container">
       <div className="projects-container fadeIn">
         <h1 className="projects-text">
-          <p className="other-text">Check&nbsp;out&nbsp;my </p>
+          <span className="other-text">Check&nbsp;out&nbsp;my </span>
           <a
             href="https://github.com/yeadamk"
             rel="noreferrer"
