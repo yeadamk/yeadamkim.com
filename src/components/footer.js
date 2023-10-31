@@ -6,13 +6,12 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 const iconSize = 30;
 
 const FooterLayout = styled.div`
-  @import "../styles/global/color-variables.scss";
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: DMSerifDisplay, Arial, Helvetica, sans-serif;
   height: max(3.7rem, 10vh);
-  background-color: $dark;
+  background-color: #1e1e1e;
   color: white;
   font-size: 1.2rem;
   padding: 0.1rem;
