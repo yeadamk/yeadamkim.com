@@ -53,7 +53,7 @@ module.exports = {
               return page.path === fileName;
             });
 
-            return { ...page, ...pageFile?.node };
+            return { ...page, ...pageFile?.node?.modifiedTime };
           });
         },
         serialize: ({ path, modifiedTime }) => {
