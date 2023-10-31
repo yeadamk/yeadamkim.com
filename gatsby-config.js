@@ -33,7 +33,7 @@ module.exports = {
               path
             }
           }
-          allFile {
+          allFile(filter: {sourceInstanceName: {eq: "pages"}}) {
             nodes {
               modifiedTime(formatString: "YYYY-MM-DD")
               name
@@ -53,7 +53,7 @@ module.exports = {
               return page.path === fileName;
             });
 
-            return { ...page, ...pageFile?.node?.modifiedTime };
+            return { ...page, ...pageFile?.nodes };
           });
         },
         serialize: ({ path, modifiedTime }) => {
