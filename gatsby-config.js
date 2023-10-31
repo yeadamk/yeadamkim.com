@@ -29,25 +29,35 @@ module.exports = {
             }
           }
           allSitePage(filter: {path: {glob: "!/blog/*"}}) {
-            edges {
-              node {
-                path
-              }
+            nodes {
+              path
             }
           }
           allFile {
             nodes {
               modifiedTime(formatString: "YYYY-MM-DD")
+              name
             }
           }
         }`,
-        serialize: ({ site, allSitePage, modifiedTime }) => {
-          allSitePage.edges.map(({ node }) => {
-            return {
-              url: site.siteMetadata.siteUrl + node.path,
-              lastmod: modifiedTime,
-            };
+        resolvePages: ({
+          allSitePage: { nodes: sitePages },
+          allFile: { nodes: pageFiles },
+        }) => {
+          return sitePages.map((page) => {
+            const pageFile = pageFiles.find((node) => {
+              const fileName = node.name === "index" ? "/" : `/${node.name}/`;
+              return page.path === fileName;
+            });
+
+            return { ...page, ...pageFile?.node };
           });
+        },
+        serialize: ({ path, modifiedTime }) => {
+          return {
+            url: path,
+            lastmod: modifiedTime,
+          };
         },
         createLinkInHead: true,
       },
@@ -56,6 +66,13 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         implementation: require("sass"),
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
       },
     },
     {
