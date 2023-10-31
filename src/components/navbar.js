@@ -100,7 +100,23 @@ const Hamburger = styled.div.attrs((props) => ({
 `;
 
 const LogoWrap = styled.div`
-  @import "../styles/global/animations.scss";
+  @keyframes spin {
+    40% {
+      transform: rotateY(-90deg);
+    }
+    100% {
+      transform: rotateY(0deg);
+    }
+  }
+
+  @-webkit-keyframes spin {
+    40% {
+      -webkit-transform: rotateY(-90deg);
+    }
+    100% {
+      -webkit-transform: rotateY(0deg);
+    }
+  }
 
   margin: auto 0;
   flex: 0 1 2.5rem;
