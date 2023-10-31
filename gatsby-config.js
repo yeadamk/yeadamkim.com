@@ -40,6 +40,9 @@ module.exports = {
             }
           }
         }`,
+        resolveSiteUrl: ({ site }) => {
+          return site.siteMetadata.siteUrl;
+        },
         resolvePages: ({
           allSitePage: { nodes: sitePages },
           allFile: { nodes: pageFiles },
