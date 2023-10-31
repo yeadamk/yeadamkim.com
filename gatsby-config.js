@@ -50,7 +50,7 @@ module.exports = {
               return page.path === fileName;
             });
 
-            return { ...page, ...pageFile?.nodes };
+            return { ...page, ...pageFile?.node };
           });
         },
         serialize: ({ path, modifiedTime }) => {
