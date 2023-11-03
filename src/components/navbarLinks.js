@@ -1,12 +1,15 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useContext } from "react";
+import { styled, ThemeProvider } from "styled-components";
 import { Link } from "gatsby";
+import { ModeContext } from "./modeProvider";
+import { darkTheme, lightTheme } from "../styles/global/theme";
 // import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const NavItem = styled(Link).attrs((props) => ({
   className: props.className,
 }))`
-  color: #111111;
+  color: ${(props) => props.theme.navbarText};
+  transition: color 200ms ease-in;
   display: flex;
   align-items: center;
   font-size: 1.2rem;
@@ -15,7 +18,6 @@ const NavItem = styled(Link).attrs((props) => ({
   font-weight: 600;
   white-space: nowrap;
   margin: 0 1.2vw;
-  transition: color 200ms ease-in;
   position: relative;
 
   &::after {
@@ -60,7 +62,8 @@ const NavItem = styled(Link).attrs((props) => ({
 // const NavAnchorItem = styled(AnchorLink).attrs((props) => ({
 //   className: props.className,
 // }))`
-//   color: #111111;
+//   color: ${(props) => props.theme.navbarText};
+//   transition: color 200ms ease-in;
 //   display: flex;
 //   align-items: center;
 //   font-size: 1.125rem;
@@ -104,8 +107,10 @@ const NavItem = styled(Link).attrs((props) => ({
 // `;
 
 const NavbarLinks = () => {
+  const { darkMode } = useContext(ModeContext);
+
   return (
-    <React.Fragment>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <NavItem to="/" activeClassName="active">
         home
       </NavItem>
@@ -118,7 +123,7 @@ const NavbarLinks = () => {
       <NavItem to="/contact" activeClassName="active">
         contacts
       </NavItem>
-    </React.Fragment>
+    </ThemeProvider>
   );
 };
 

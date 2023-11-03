@@ -1,22 +1,24 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState, useContext } from "react";
+import { ModeContext } from "./modeProvider";
+import { styled, ThemeProvider } from "styled-components";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import NavbarLinks from "./navbarLinks";
+import { darkTheme, lightTheme } from "../styles/global/theme";
 
 const Navigation = styled.nav`
   position: relative;
   display: flex;
   font-family: DMSerifDisplay, Arial, Helvetica, sans-serif;
   height: max(4rem, 10vh);
-  background-color: white;
+  background-color: ${(props) => props.theme.navbar};
+  transition: background-color 200ms ease-in;
   justify-content: space-between;
-  transition: background-color 0.3s ease-in;
 
   border-bottom: 2px solid #33333320;
   margin: 0 auto;
   padding: 0 5vw;
-  z-index: 7;
+  z-index: 10;
   align-self: center;
 
   @media (max-width: 768px) {
@@ -58,8 +60,8 @@ const Navbox = styled.div.attrs((props) => ({
     width: 100%;
     justify-content: flex-start;
     padding-top: 10vh;
-    background-color: white;
-    transition: all 0.2s ease-in;
+    background-color: ${(props) => props.theme.navbox};
+    transition: all 200ms ease-in;
     top: max(3.7rem, 10vh);
     left: ${(props) => (props.open ? "-100%" : "0")};
   }
@@ -68,7 +70,8 @@ const Navbox = styled.div.attrs((props) => ({
 const Hamburger = styled.div.attrs((props) => ({
   className: props.className,
 }))`
-  background-color: #111;
+  background-color: ${(props) => props.theme.hamburger};
+  transition: background-color 200ms ease-in;
   width: 30px;
   height: 3px;
   transition: all 0.2s linear;
@@ -80,7 +83,7 @@ const Hamburger = styled.div.attrs((props) => ({
   &::after {
     width: 30px;
     height: 3.2px;
-    background-color: #111;
+    background-color: ${(props) => props.theme.hamburger};
     content: "";
     position: absolute;
     transition: all 0.2s linear;
@@ -138,33 +141,39 @@ const LogoWrap = styled.div`
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const { darkMode } = useContext(ModeContext);
 
   return (
-    <Navigation>
-      <LogoWrap as={Link} to="/">
-        <StaticImage
-          alt="navigation bar logo"
-          src="../images/logo.png"
-          loading="eager"
-        />
-      </LogoWrap>
-      <Toggle className="clickable" onClick={() => setNavbarOpen(!navbarOpen)}>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+      <Navigation>
+        <LogoWrap as={Link} to="/">
+          <StaticImage
+            alt="navigation bar logo"
+            src="../images/logo.png"
+            loading="eager"
+          />
+        </LogoWrap>
+        <Toggle
+          className="clickable"
+          onClick={() => setNavbarOpen(!navbarOpen)}
+        >
+          {navbarOpen ? (
+            <Hamburger open className="clickable" />
+          ) : (
+            <Hamburger className="clickable" />
+          )}
+        </Toggle>
         {navbarOpen ? (
-          <Hamburger open className="clickable" />
+          <Navbox>
+            <NavbarLinks />
+          </Navbox>
         ) : (
-          <Hamburger className="clickable" />
+          <Navbox open>
+            <NavbarLinks />
+          </Navbox>
         )}
-      </Toggle>
-      {navbarOpen ? (
-        <Navbox>
-          <NavbarLinks />
-        </Navbox>
-      ) : (
-        <Navbox open>
-          <NavbarLinks />
-        </Navbox>
-      )}
-    </Navigation>
+      </Navigation>
+    </ThemeProvider>
   );
 };
 

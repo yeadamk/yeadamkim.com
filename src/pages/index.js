@@ -1,5 +1,7 @@
-import * as React from "react";
+import React, { useContext } from "react";
 import { Link } from "gatsby";
+import ModeButton from "../components/modeButton";
+import { ModeContext } from "../components/modeProvider";
 import Layout from "../components/layout";
 import RoughNotation from "../components/roughNotation";
 import Seo from "../components/seo";
@@ -30,50 +32,55 @@ const linkTree = [
   },
 ];
 
-const IndexPage = () => (
-  <Layout>
-    <main className="hero-container">
-      <h1 className="hero-text type-wrapper fadeIn">
-        <span className="hero-other-text">Hi, my name's </span>
-        <RoughNotation
-          content="Yeadam&nbsp;Kim"
-          type="underline"
-          color="black"
-          className="hero-name clickable"
-          width="5"
-          padding="0"
-        />
-        <span className="placeholder"></span>
-      </h1>
-    </main>
-    <div className="gradient-container">
-      {/* About */}
-      <section id="about" className="about-container">
-        <div>
-          <header className="about-header">
-            <Link to="/about">about</Link>
-          </header>
-          <p className="about-text">{about}</p>
-        </div>
-        <div>
-          <header className="about-header-right">
-            <Link to="/projects">projects</Link>
-          </header>
-          <p className="about-text-right">{projects}</p>
-        </div>
-      </section>
-      {/* Link Tree */}
-      <section id="contact" className="link-container">
-        <header className="link-header">Link Tree</header>
-        {linkTree.map((link) => (
-          <a key={link.url} className="link-item" href={`${link.url}`}>
-            <div className="link-text">{link.text}</div>
-          </a>
-        ))}
-      </section>
-    </div>
-  </Layout>
-);
+const IndexPage = () => {
+  const { darkMode, setDarkMode } = useContext(ModeContext);
+
+  return (
+    <Layout>
+      <main className="hero-container">
+        <h1 className="hero-text type-wrapper fadeIn">
+          <ModeButton darkMode={darkMode} setDarkMode={setDarkMode} />
+          <span className="hero-other-text">Hi, my name's </span>
+          <RoughNotation
+            content="Yeadam&nbsp;Kim"
+            type="underline"
+            color="black"
+            className="hero-name"
+            width="5"
+            padding="0"
+          />
+          <span className="placeholder"></span>
+        </h1>
+      </main>
+      <div className="gradient-container">
+        {/* About */}
+        <section id="about" className="about-container">
+          <div>
+            <header className="about-header">
+              <Link to="/about">about</Link>
+            </header>
+            <p className="about-text">{about}</p>
+          </div>
+          <div>
+            <header className="about-header-right">
+              <Link to="/projects">projects</Link>
+            </header>
+            <p className="about-text-right">{projects}</p>
+          </div>
+        </section>
+        {/* Link Tree */}
+        <section id="contact" className="link-container">
+          <header className="link-header">Link Tree</header>
+          {linkTree.map((link) => (
+            <a key={link.url} className="link-item" href={`${link.url}`}>
+              <div className="link-text">{link.text}</div>
+            </a>
+          ))}
+        </section>
+      </div>
+    </Layout>
+  );
+};
 
 // Using default SEO from 'gatsby-config.js'
 export const Head = () => <Seo />;
