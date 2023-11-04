@@ -9,14 +9,14 @@ const Toggle = styled.button.attrs((props) => ({
   display: flex;
   position: absolute;
   align-items: center;
-  font-size: 2.5rem;
+  font-size: max(5vh, 2rem);
   padding: 10px;
   border: none;
   border-radius: 50%;
   padding: 0;
   background: none;
-  top: 1.5rem;
-  right: 1.5%;
+  top: 0;
+  right: 0;
   box-shadow: 0 0 #33333320;
   z-index: 4;
 
@@ -24,8 +24,16 @@ const Toggle = styled.button.attrs((props) => ({
     transform: scale(1.05);
   }
 
-  @media (max-width: 900px) {
-    display: none;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 564px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 1rem;
   }
 `;
 
@@ -39,7 +47,7 @@ const ModeButton = ({ darkMode, setDarkMode }) => {
         }}
         className="clickable"
       >
-        {darkMode ? <MdDarkMode /> : <MdOutlineDarkMode />}
+        {darkMode ? <MdOutlineDarkMode /> : <MdDarkMode />}
       </Toggle>
     </ThemeProvider>
   );

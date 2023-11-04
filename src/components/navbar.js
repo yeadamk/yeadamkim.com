@@ -6,11 +6,12 @@ import { StaticImage } from "gatsby-plugin-image";
 import NavbarLinks from "./navbarLinks";
 import { darkTheme, lightTheme } from "../styles/global/theme";
 
+// Activates hamburger menu bar at width 768px
 const Navigation = styled.nav`
   position: relative;
   display: flex;
   font-family: DMSerifDisplay, Arial, Helvetica, sans-serif;
-  height: max(4rem, 10vh);
+  height: 5rem;
   background-color: ${(props) => props.theme.navbar};
   transition: background-color 200ms ease-in;
   justify-content: space-between;

@@ -39,17 +39,21 @@ const IndexPage = () => {
     <Layout>
       <main className="hero-container">
         <h1 className="hero-text type-wrapper fadeIn">
-          <ModeButton darkMode={darkMode} setDarkMode={setDarkMode} />
-          <span className="hero-other-text">Hi, my name's </span>
-          <RoughNotation
-            content="Yeadam&nbsp;Kim"
-            type="underline"
-            color="black"
-            className="hero-name"
-            width="5"
-            padding="0"
-          />
-          <span className="placeholder"></span>
+          <span className="hero-other-text">
+            <span className="placeholder"></span>
+            Hi, my name's{" "}
+          </span>
+          <div className="toggle-container">
+            <RoughNotation
+              content="Yeadam&nbsp;Kim"
+              type="underline"
+              color="black"
+              className="hero-name"
+              width="5"
+              padding="0"
+            />
+            <ModeButton darkMode={darkMode} setDarkMode={setDarkMode} />
+          </div>
         </h1>
       </main>
       <div className="gradient-container">
