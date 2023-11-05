@@ -13,7 +13,6 @@ const Navigation = styled.nav`
   font-family: DMSerifDisplay, Arial, Helvetica, sans-serif;
   height: 5rem;
   background-color: ${(props) => props.theme.navbar};
-  transition: background-color 200ms ease-in;
   justify-content: space-between;
 
   border-bottom: 2px solid #33333320;

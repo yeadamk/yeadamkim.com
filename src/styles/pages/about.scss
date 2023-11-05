@@ -14,10 +14,12 @@
   justify-content: center;
   flex-direction: column;
   min-height: max(90vh, 30rem);
+
+  color: black;
 }
 
 .about-page-header {
-  color: black;
+  color: inherit;
   font-family: Lato-Black, Arial, Helvetica, sans-serif;
   font-size: 2.5rem;
   text-align: left;
@@ -39,7 +41,7 @@
 
 .about-page-text {
   white-space: pre-line;
-  color: black;
+  color: inherit;
   text-align: left;
   font-family: Lato-Regular, Arial, Helvetica, sans-serif;
   font-size: 1.7rem;

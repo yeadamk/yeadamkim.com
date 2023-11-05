@@ -17,11 +17,10 @@ const Toggle = styled.button.attrs((props) => ({
   background: none;
   top: 0;
   right: 0;
-  box-shadow: 0 0 #33333320;
   z-index: 4;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.07);
   }
 
   @media (max-width: 768px) {
@@ -37,7 +36,10 @@ const Toggle = styled.button.attrs((props) => ({
   }
 `;
 
-const ModeButton = ({ darkMode, setDarkMode }) => {
+const LightSwitch = ({ darkMode, setDarkMode }) => {
+  const dark = darkTheme.toggle;
+  const light = lightTheme.toggle;
+
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Toggle
@@ -47,10 +49,14 @@ const ModeButton = ({ darkMode, setDarkMode }) => {
         }}
         className="clickable"
       >
-        {darkMode ? <MdOutlineDarkMode /> : <MdDarkMode />}
+        {darkMode ? (
+          <MdDarkMode color={dark} />
+        ) : (
+          <MdOutlineDarkMode color={light} />
+        )}
       </Toggle>
     </ThemeProvider>
   );
 };
 
-export default ModeButton;
+export default LightSwitch;

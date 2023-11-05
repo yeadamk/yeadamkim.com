@@ -7,7 +7,7 @@ $dark-yellow: rgb(210, 167, 58);
 $bright-yellow: #ffd54f;
 $dark: #1e1e1e;
 $dark-and-darker: #0e0e0e;
-$light-dark: #1f1f1f;
+$light-dark: #242424;
 $light-light-blue: #d3f0f9;
 $light-blue: #99def4;
 $sky-blue: #5db5dbd8;
@@ -15,3 +15,27 @@ $mid-blue: #539fd8;
 $dark-blue: rgb(22, 76, 118);
 $shadow: #dfdfdf;
 $light_purple: rgb(173, 184, 236);
+
+/* 
+ * Dark mode
+ */
+$dark-background: #1a1a1a;
+$dark-text: #fafafa;
+
+.darkMode-background {
+  background: $dark !important;
+}
+
+.darkMode-text {
+  color: $dark-text !important;
+}
+
+.darkMode-border-right {
+  border: 0.3rem solid whitesmoke;
+  border-left: none;
+}
+
+.darkMode-border-left {
+  border: 0.3rem solid whitesmoke;
+  border-right: none;
+}

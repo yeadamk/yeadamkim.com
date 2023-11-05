@@ -26,7 +26,7 @@
 }
 
 .projects-text {
-  color: $light-blue;
+  color: $dark-text;
   position: relative;
   font-weight: 600;
   text-align: center;
@@ -37,6 +37,7 @@
   &:hover {
     .other-text {
       opacity: 20%;
+      transition: opacity 0.3s;
     }
 
     .github-text {
@@ -45,23 +46,23 @@
   }
 
   .other-text {
-    transition: opacity 1s;
+    transition: opacity 0.5s;
 
-    background: -webkit-linear-gradient(
-      45deg,
-      #c5ebff 16.666%,
-      #b8e4fb 16.666%,
-      #c9e7f8 33.333%,
-      #b6e4f7 33.333%,
-      #c4e6f8 50%,
-      #c6e3ff 50%,
-      #c5ebff 66.666%,
-      #c5ebff 66.666%,
-      #b7e4fc 80.333%,
-      #c5ebff 80.333%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // background: -webkit-linear-gradient(
+    //   45deg,
+    //   #c5ebff 16.666%,
+    //   #b8e4fb 16.666%,
+    //   #c9e7f8 33.333%,
+    //   #b6e4f7 33.333%,
+    //   #c4e6f8 50%,
+    //   #c6e3ff 50%,
+    //   #c5ebff 66.666%,
+    //   #c5ebff 66.666%,
+    //   #b7e4fc 80.333%,
+    //   #c5ebff 80.333%
+    // );
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
   }
 
   .github-text {

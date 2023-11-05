@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "gatsby";
-import ModeButton from "../components/modeButton";
 import { ModeContext } from "../components/modeProvider";
+import LightSwitch from "../components/lightSwitch";
 import Layout from "../components/layout";
 import RoughNotation from "../components/roughNotation";
+import LinkTree from "../components/linkTree";
 import Seo from "../components/seo";
 import "../styles/pages/index.scss";
 
@@ -13,27 +14,52 @@ const about =
 const projects =
   "Every day, my passion in software engineering is fueled by working on personal projects. I like to experiment with my code, such as implementing stdlib functions in C or making python/bash scripts for automating mundane tasks. For my experimental projects, I typically like to keep them private, but if you want to check out my public repos, you can find them at my GitHub!\n\nThank you for visiting!";
 
-const linkTree = [
-  {
-    text: "Email",
-    url: "mailto:hiyeadam@gmail.com",
-  },
-  {
-    text: "GitHub",
-    url: "https://github.com/yeadamk",
-  },
-  {
-    text: "LinkedIn",
-    url: "https://www.linkedin.com/in/yeadamkim/",
-  },
-  {
-    text: "Instagram",
-    url: "https://www.instagram.com/yeadam.k",
-  },
-];
-
 const IndexPage = () => {
   const { darkMode, setDarkMode } = useContext(ModeContext);
+
+  useEffect(() => {
+    if (darkMode) {
+      document
+        .querySelector(".hero-container")
+        .classList.add("darkMode-background");
+      document
+        .querySelector(".gradient-container")
+        .classList.add("darkMode-background");
+      document.querySelector(".hero-text").classList.add("darkMode-text");
+      document
+        .querySelector(".about-header")
+        .classList.add("darkMode-border-right");
+      document
+        .querySelector(".about-text")
+        .classList.add("darkMode-border-right");
+      document
+        .querySelector(".about-header-right")
+        .classList.add("darkMode-border-left");
+      document
+        .querySelector(".about-text-right")
+        .classList.add("darkMode-border-left");
+    } else {
+      document
+        .querySelector(".hero-container")
+        .classList.remove("darkMode-background");
+      document
+        .querySelector(".gradient-container")
+        .classList.remove("darkMode-background");
+      document.querySelector(".hero-text").classList.remove("darkMode-text");
+      document
+        .querySelector(".about-header")
+        .classList.remove("darkMode-border-right");
+      document
+        .querySelector(".about-text")
+        .classList.remove("darkMode-border-right");
+      document
+        .querySelector(".about-header-right")
+        .classList.remove("darkMode-border-left");
+      document
+        .querySelector(".about-text-right")
+        .classList.remove("darkMode-border-left");
+    }
+  }, [darkMode]);
 
   return (
     <Layout>
@@ -44,15 +70,26 @@ const IndexPage = () => {
             Hi, my name's{" "}
           </span>
           <div className="toggle-container">
-            <RoughNotation
-              content="Yeadam&nbsp;Kim"
-              type="underline"
-              color="black"
-              className="hero-name"
-              width="5"
-              padding="0"
-            />
-            <ModeButton darkMode={darkMode} setDarkMode={setDarkMode} />
+            {darkMode ? (
+              <RoughNotation
+                content="Yeadam&nbsp;Kim"
+                type="underline"
+                color="white"
+                className="hero-name"
+                width="5"
+                padding="0"
+              />
+            ) : (
+              <RoughNotation
+                content="Yeadam&nbsp;Kim"
+                type="underline"
+                color="black"
+                className="hero-name"
+                width="5"
+                padding="0"
+              />
+            )}
+            <LightSwitch darkMode={darkMode} setDarkMode={setDarkMode} />
           </div>
         </h1>
       </main>
@@ -72,15 +109,7 @@ const IndexPage = () => {
             <p className="about-text-right">{projects}</p>
           </div>
         </section>
-        {/* Link Tree */}
-        <section id="contact" className="link-container">
-          <header className="link-header">Link Tree</header>
-          {linkTree.map((link) => (
-            <a key={link.url} className="link-item" href={`${link.url}`}>
-              <div className="link-text">{link.text}</div>
-            </a>
-          ))}
-        </section>
+        <LinkTree indexPage={true} />
       </div>
     </Layout>
   );
