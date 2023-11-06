@@ -9,7 +9,7 @@ const NavItem = styled(Link).attrs((props) => ({
   className: props.className,
 }))`
   color: ${(props) => props.theme.navbarText};
-  transition: ${(props) => (props.darkMode ? "none" : "color 200ms ease-in")};
+  transition: ${(props) => (props.dark ? "none" : "color 200ms ease-in")};
   display: flex;
   align-items: center;
   font-size: 1.2rem;
@@ -110,16 +110,16 @@ const NavbarLinks = () => {
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <NavItem to="/" activeClassName="active" darkMode={darkMode}>
+      <NavItem to="/" activeClassName="active" dark={darkMode ? 1 : 0}>
         home
       </NavItem>
-      <NavItem to="/about" activeClassName="active" darkMode={darkMode}>
+      <NavItem to="/about" activeClassName="active" dark={darkMode ? 1 : 0}>
         about
       </NavItem>
-      <NavItem to="/projects" activeClassName="active" darkMode={darkMode}>
+      <NavItem to="/projects" activeClassName="active" dark={darkMode ? 1 : 0}>
         projects
       </NavItem>
-      <NavItem to="/contact" activeClassName="active" darkMode={darkMode}>
+      <NavItem to="/contact" activeClassName="active" dark={darkMode ? 1 : 0}>
         contacts
       </NavItem>
     </ThemeProvider>
