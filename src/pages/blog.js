@@ -48,6 +48,7 @@ export const Head = () => (
   <Seo
     title="Yeadam Blogging"
     description="A collection of somewhat random blog posts by Yeadam Kim."
+    path="/blog/"
   />
 );
 export default BlogPage;

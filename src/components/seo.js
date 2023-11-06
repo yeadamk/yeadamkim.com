@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby";
  *
  * query data from gatsby-config.js
  */
-function Seo({ title, description, author, children }) {
+function Seo({ title, description, author, path, children }) {
   const data = useStaticQuery(graphql`
     query SiteMetadataQuery {
       site {
@@ -43,7 +43,7 @@ function Seo({ title, description, author, children }) {
       <meta name="keywords" content={seo.keywords} />
 
       {/* Canonical Tags */}
-      <link rel="canonical" href={seo.homeUrl} />
+      <link rel="canonical" href={`${seo.homeUrl}${path}`} />
 
       {/* Social Media */}
       <meta property="og:title" content={seo.title} />

@@ -9,5 +9,5 @@ const ContactPage = () => (
   </Layout>
 );
 
-export const Head = () => <Seo title="Yeadam Kim | contact" />;
+export const Head = () => <Seo title="Yeadam Kim | contact" path="/contact/" />;
 export default ContactPage;
