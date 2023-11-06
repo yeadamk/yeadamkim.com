@@ -45,7 +45,6 @@ const LightSwitch = ({ darkMode, setDarkMode }) => {
       <Toggle
         onClick={() => {
           setDarkMode(!darkMode);
-          console.log({ darkMode });
         }}
         className="clickable"
       >
