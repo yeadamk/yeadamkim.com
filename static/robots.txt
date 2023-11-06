@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+
+User-agent: *
 Disallow: /blog/
+
+Sitemap: https://www.yeadamkim.com/sitemap-index.xml
