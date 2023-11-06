@@ -57,7 +57,7 @@ const LinkHeader = styled.header`
   color: white;
   font-size: 2.5rem;
   font-weight: bold;
-  margin-top: max(3rem, 7vh);
+  margin-top: max(0.8rem, 3vh);
   margin-bottom: max(0.8rem, 3vh);
 
   @media (max-width: 768px) {
@@ -86,7 +86,7 @@ const LinkItem = styled.a`
   transition: all 300ms ease-in;
 
   &:last-child {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
   }
 
   &:hover {

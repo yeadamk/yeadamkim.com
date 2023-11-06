@@ -94,7 +94,6 @@ const IndexPage = () => {
         </h1>
       </main>
       <div className="gradient-container">
-        {/* About */}
         <section id="about" className="about-container">
           <div>
             <header className="about-header">
