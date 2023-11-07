@@ -120,7 +120,7 @@ const NavbarLinks = () => {
         projects
       </NavItem>
       <NavItem to="/contact" activeClassName="active" dark={darkMode ? 1 : 0}>
-        contacts
+        contact
       </NavItem>
     </ThemeProvider>
   );
