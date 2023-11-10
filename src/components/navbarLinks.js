@@ -40,6 +40,15 @@ const NavItem = styled(Link).attrs((props) => ({
     }
   }
 
+  @media (hover: none) {
+    &:hover {
+      color: goldenrod;
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
   @media (max-width: 1024px) {
     margin: 0 2vw;
   }
