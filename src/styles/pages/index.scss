@@ -63,10 +63,11 @@
 
   @media (max-width: 425px) {
     margin-bottom: 1rem;
+    font-size: 2rem;
   }
 
-  @media (max-width: 320px) {
-    font-size: 2rem;
+  @media (max-width: 300px) {
+    font-size: 1.5rem;
   }
 }
 
@@ -90,8 +91,8 @@
   > .placeholder {
     display: block;
     position: absolute;
-    top: 0%;
-    left: -30%;
+    top: -50%;
+    left: -20%;
     font-family: SourceCodePro;
     z-index: 1;
     font-size: max(2rem, 3vmin);
@@ -100,7 +101,17 @@
     height: 100%;
     background-color: transparent;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 564px) {
+      font-size: 1.2rem;
+      top: -55%;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 1rem;
+      top: -60%;
+    }
+
+    @media (max-width: 300px) {
       display: none;
     }
   }
@@ -108,13 +119,15 @@
   > .placeholder {
     @include typed(
       "(ﾉ◕ヮ◕)ﾉ・ﾟ✧",
-      "|(• ◡•)|",
       "༼ つ◕_◕ ༽つ",
-      "(Ծ‸ Ծ)",
+      "ʕ •`ᴥ•´ʔ",
+      "ʕ•ᴥ•ʔ",
+      "ʕ•͡ω•ʔ ✧",
+      "|(• ◡•)|",
+      "ξ・_>・）",
       "(•ᴥ• )",
-      "\\(^-^)/",
+      "¯\\_(ツ)_/¯",
       "(っ^з^)♬",
-      "(•̀ᴗ•́)",
       "\\_ツ_/",
       "◖ᵔᴥᵔ◗ ♪",
       "◕_◕",
@@ -123,11 +136,13 @@
       "ʕ•ᴥ•ʔ",
       "ʕ •`ᴥ•´ʔ",
       "(｡◕‿◕｡)",
+      "(/◕ヮ◕)/",
       "٩◔̯-◔۶",
       "V•ᴥ•V",
-      "{•̃_•̃}",
+      "\\(^-^)/",
+      "(•̀ᴗ•́)",
       "\\(ᵔᵕᵔ)/",
-      "ʕ •́؈•̀ ₎",
+      "ʕ •́؈•̀)",
       $speeds,
       $options
     );

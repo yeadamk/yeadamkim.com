@@ -64,10 +64,10 @@ const IndexPage = () => {
   return (
     <Layout>
       <main className="hero-container">
-        <h1 className="hero-text type-wrapper fadeIn">
-          <span className="hero-other-text">
+        <h1 className="hero-text fadeIn">
+          <span className="hero-other-text type-wrapper">
             <span className="placeholder"></span>
-            Hi, my name's{" "}
+            Hi, my name's&nbsp;
           </span>
           <div className="toggle-container">
             {darkMode ? (
