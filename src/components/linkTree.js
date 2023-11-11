@@ -97,8 +97,8 @@ const LinkItem = styled.a`
 
   @media (hover: none) {
     &:hover {
-      color: inherit;
-      background-color: inherit;
+      color: ${(props) => props.theme.linkText};
+      background-color: ${(props) => props.theme.linkItem};
       transition: none;
     }
   }
