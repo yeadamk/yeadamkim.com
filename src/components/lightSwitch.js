@@ -32,7 +32,7 @@ const Toggle = styled.button.attrs((props) => ({
   }
 
   @media (max-width: 425px) {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   @media (max-width: 300px) {
