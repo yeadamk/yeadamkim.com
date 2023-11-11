@@ -83,7 +83,7 @@ const LinkItem = styled.a`
   text-align: center;
   margin: 1.1rem auto;
   padding: 1rem 2rem;
-  transition: all 300ms ease-in;
+  transition: all 50ms ease-in;
 
   &:last-child {
     margin-bottom: 1.5rem;

@@ -101,13 +101,13 @@
 
   @media (hover: none) {
     &:hover {
-      transition: none;
-
       .other-text {
+        transition: none;
         opacity: 1;
       }
 
       .github-text {
+        transition: none;
         color: inherit;
       }
     }
