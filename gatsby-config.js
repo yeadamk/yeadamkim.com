@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: `Yeadam Kim`,
-    description: `Yeadam Kim is an undergraduate at UCLA, studying mathematics and computer science.`,
+    description: `Come and check out my personal website! Yeadam Kim is an undergraduate Mathematics of Computation major at UCLA.`,
     author: `Yeadam Kim`,
     keywords: `Yeadam Kim, dev, developer, personal website, portfolio`,
     siteUrl: `https://www.yeadamkim.com`,
