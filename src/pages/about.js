@@ -156,8 +156,8 @@ const AboutPage = () => {
               Apart from academics, I also enjoy playing various{" "}
               <RoughNotation
                 content="sports"
-                type="box"
-                color="black"
+                type="highlight"
+                color="#ffd54f"
                 width="4"
                 className=""
                 padding="0"
@@ -167,8 +167,8 @@ const AboutPage = () => {
               interest in{" "}
               <RoughNotation
                 content="jazz piano"
-                type="box"
-                color="black"
+                type="highlight"
+                color="#ffd54f"
                 width="4"
                 className=""
                 padding="0"
