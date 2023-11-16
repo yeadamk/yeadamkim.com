@@ -44,6 +44,6 @@ const ProjectsPage = () => {
 };
 
 export const Head = () => (
-  <Seo title="Yeadam Kim | projects" path="/projects/" />
+  <Seo title="Projects | Yeadam Kim" path="/projects/" />
 );
 export default ProjectsPage;

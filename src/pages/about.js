@@ -188,5 +188,5 @@ const AboutPage = () => {
   );
 };
 
-export const Head = () => <Seo title="Yeadam Kim | about" path="/about/" />;
+export const Head = () => <Seo title="About | Yeadam Kim" path="/about/" />;
 export default AboutPage;
