@@ -12,7 +12,7 @@ const about =
   "I'm a third-year Mathematics of Computation major at UCLA.\n\nWhile actively exploring various career opportunities at the moment, I'm particularly passionate in the field of software engineering. I love to work on personal projects on the side, tinker around with my linux terminal, and keep up with the latest tech videos on YouTube. With a strong foundation in mathematics and computer science, I hope to pursue a software engineering career upon graduation. Apart from academics, I also enjoy playing various sports (e.g. soccer, badminton, volleyball, and more), and have great interest in jazz piano.";
 
 const projects =
-  "Every day, my passion in software engineering is fueled by working on personal projects. I like to bring my creative ideas to life, to truly translate my acquired knowledge to a fully functioning program. From making python/bash scripts automating mundane tasks to building a fully scalable web application using React, I have developed a diverse range of projects in languages such as C, C++, JavaScript, and Python.";
+  "Every day, my passion in software engineering is fueled by working on personal projects. I really like to bring my creative ideas to life. I find joy in translating my acquired knowledge to a fully functioning program and in the process of learning while working on my personal projects.\n\nFrom making python/bash scripts to automate mundane tasks to building a fully scalable web application using React, I have developed a diverse range of projects in languages such as C, C++, JavaScript, and Python.";
 
 const IndexPage = () => {
   const { darkMode, setDarkMode } = useContext(ModeContext);
