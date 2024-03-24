@@ -154,8 +154,8 @@ const Navbar = () => {
           />
         </LogoWrap>
         <Toggle
-          className="clickable"
           onClick={() => setNavbarOpen(!navbarOpen)}
+          className="clickable"
         >
           {navbarOpen ? (
             <Hamburger open className="clickable" />
