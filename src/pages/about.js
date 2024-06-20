@@ -35,7 +35,7 @@ const AboutPage = () => {
           <h1 className="about-page-header cursive">{aboutHeader}</h1>
           {darkMode ? (
             <p className="about-page-text">
-              I'm a third-year{" "}
+              I'm a fourth-year{" "}
               <RoughNotation
                 content="Mathematics of Computation"
                 type="underline"
@@ -109,7 +109,7 @@ const AboutPage = () => {
             </p>
           ) : (
             <p className="about-page-text">
-              I'm a third-year{" "}
+              I'm a fourth-year{" "}
               <RoughNotation
                 content="Mathematics of Computation"
                 type="highlight"
