@@ -28,160 +28,106 @@ const AboutPage = () => {
     }
   }, [darkMode]);
 
+  const highlightType = darkMode ? "underline" : "highlight";
+  const highlightColor = darkMode ? {
+    computation: "#cca218",
+    ucla: "#2774ae",
+    development: "#8bc34a",
+    mathCS: "#cca218",
+    swe: "#9c27a1",
+    sports: "#ff9800",
+    piano: "#ca1e63",
+  } : {
+    computation: "#ffd54f",
+    ucla: "#ffd54f",
+    development: "#ffd54f",
+    mathCS: "#ffd54f",
+    swe: "#ffd54f",
+    sports: "#ffd54f",
+    piano: "#ffd54f",
+  };
+
   return (
     <Layout>
       <section className="about-background-container">
         <div className="about-page-container fadeIn">
           <h1 className="about-page-header cursive">{aboutHeader}</h1>
-          {darkMode ? (
-            <p className="about-page-text">
-              I'm a fourth-year{" "}
-              <RoughNotation
-                content="Mathematics of Computation"
-                type="underline"
-                color="#cca218"
-                width="6"
-                className=""
-                padding="0"
-                delay="500"
-              />{" "}
-              major at{" "}
-              <RoughNotation
-                content="UCLA"
-                type="underline"
-                color="#2774AE"
-                width="6"
-                className=""
-                padding="0"
-                delay="1500"
-              />
-              . While actively exploring various career opportunities at the
-              moment, I'm particularly passionate in the field of{" "}
-              <RoughNotation
-                content="Software Engineering"
-                type="underline"
-                color="#cca218"
-                width="5"
-                className=""
-                padding="0"
-                delay="2000"
-              />
-              . I love to work on personal projects on the side, tinker around
-              with my linux terminal, and keep up with the latest tech videos on
-              YouTube. With a strong foundation in{" "}
-              <RoughNotation
-                content="Mathematics and Computer Science"
-                type="underline"
-                color="#cca218"
-                width="4"
-                className=""
-                padding="0"
-                delay="3000"
-              />
-              , I hope to pursue a software engineering career upon graduation.
-              Apart from academics, I also enjoy playing various{" "}
-              <RoughNotation
-                content="sports"
-                type="underline"
-                color="#cca218"
-                width="4"
-                className=""
-                padding="0"
-                delay="3500"
-              />{" "}
-              (e.g. soccer, badminton, volleyball, and more), and have great
-              interest in{" "}
-              <RoughNotation
-                content="jazz piano"
-                type="underline"
-                color="#cca218"
-                width="4"
-                className=""
-                padding="0"
-                delay="4000"
-              />
-              .
-              <br />
-              <br />
-              <b>
-                <i>Yeadam&nbsp;Kim</i>
-              </b>
-            </p>
-          ) : (
-            <p className="about-page-text">
-              I'm a fourth-year{" "}
-              <RoughNotation
-                content="Mathematics of Computation"
-                type="highlight"
-                color="#ffd54f"
-                width="6"
-                className=""
-                padding="0"
-                delay="500"
-              />{" "}
-              major at{" "}
-              <RoughNotation
-                content="UCLA"
-                type="box"
-                color="#2774AE"
-                width="4"
-                className=""
-                padding="0"
-                delay="1500"
-              />
-              . While actively exploring various career opportunities at the
-              moment, I'm particularly passionate in the field of{" "}
-              <RoughNotation
-                content="Software Engineering"
-                type="highlight"
-                color="#ffd54f"
-                width="4"
-                className=""
-                padding="0"
-                delay="2000"
-              />
-              . I love to work on personal projects on the side, tinker around
-              with my linux terminal, and keep up with the latest tech videos on
-              YouTube. With a strong foundation in{" "}
-              <RoughNotation
-                content="Mathematics and Computer Science"
-                type="highlight"
-                color="#ffd54f"
-                width="4"
-                className=""
-                padding="0"
-                delay="3000"
-              />
-              , I hope to pursue a software engineering career upon graduation.
-              Apart from academics, I also enjoy playing various{" "}
-              <RoughNotation
-                content="sports"
-                type="highlight"
-                color="#ffd54f"
-                width="4"
-                className=""
-                padding="0"
-                delay="3500"
-              />{" "}
-              (e.g. soccer, badminton, volleyball, and more), and have great
-              interest in{" "}
-              <RoughNotation
-                content="jazz piano"
-                type="highlight"
-                color="#ffd54f"
-                width="4"
-                className=""
-                padding="0"
-                delay="4000"
-              />
-              .
-              <br />
-              <br />
-              <b>
-                <i>Yeadam&nbsp;Kim</i>
-              </b>
-            </p>
-          )}
+          <p className="about-page-text">
+            I'm a fourth-year{" "}
+            <RoughNotation
+              content="Mathematics of Computation"
+              type={highlightType}
+              color={highlightColor.computation}
+              width="4"
+              padding="0"
+              delay="500"
+            />{" "}
+            major at{" "}
+            <RoughNotation
+              content="UCLA"
+              type={highlightType}
+              color={highlightColor.ucla}
+              width="5"
+              padding="0"
+              delay="1000"
+            />
+            . I'm interested in{" "}
+            <RoughNotation
+              content="full-stack or back-end development"
+              type={highlightType}
+              color={highlightColor.development}
+              width="4"
+              padding="0"
+              delay="2000"
+            />
+            , delivering products, features, and optimizations directly to end-users. 
+            I love to work on personal projects on the side, tinker around
+            with my linux terminal, and keep up with the latest tech videos on
+            YouTube. With a strong foundation in{" "}
+            <RoughNotation
+              content="Mathematics and Computer Science"
+              type={highlightType}
+              color={highlightColor.mathCS}
+              width="4"
+              padding="0"
+              delay="4000"
+            />
+            , I’m eager to tackle real-world challenges and bring my passion in{" "}
+            <RoughNotation
+              content="software engineering"
+              type={highlightType}
+              color={highlightColor.swe}
+              width="4"
+              padding="0"
+              delay="5000"
+            />{" "}
+            to create meaningful solutions that benefit people around the world. 
+            Apart from academics, I also enjoy playing various{" "}
+            <RoughNotation
+              content="sports"
+              type={highlightType}
+              color={highlightColor.sports}
+              width="4"
+              padding="0"
+              delay="5500"
+            />{" "}
+            (e.g. soccer, badminton, volleyball, and more), and have great
+            interest in{" "}
+            <RoughNotation
+              content="jazz piano"
+              type={highlightType}
+              color={highlightColor.piano}
+              width="4"
+              padding="0"
+              delay="6000"
+            />
+            .
+            <br />
+            <br />
+            <b>
+              <i>Yeadam&nbsp;Kim</i>
+            </b>
+          </p>
         </div>
       </section>
     </Layout>

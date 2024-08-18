@@ -6,7 +6,7 @@ import { ModeContext } from "./modeProvider";
 const linkTree = [
   {
     text: "Email",
-    url: "mailto:hiyeadam@gmail.com",
+    url: "mailto:yeadamkk@gmail.com",
   },
   {
     text: "GitHub",

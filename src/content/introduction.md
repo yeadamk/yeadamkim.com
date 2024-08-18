@@ -8,4 +8,4 @@ slug: "introduction"
 
 # Let me introduce myself...
 
-Hi, my name is Yeadam Kim and I am a third year Mathematics of Computation major at UCLA. Welcome to my website!
+Hi, my name is Yeadam Kim. Welcome to my website!
