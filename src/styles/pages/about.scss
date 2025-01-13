@@ -1,11 +1,17 @@
-@import "../global/color-vars.scss";
-@import "../global/animations";
+@use "../global/color-vars.scss" as colors;
+@use "../global/animations" as anim;
 
 /* 
  * Page specific styles
  */
 .about-background-container {
-  background: linear-gradient(135deg, $bright-yellow 0%, $light-light-blue 1%, $light-blue 95%, $sky-blue 100%);
+  background: linear-gradient(
+    135deg,
+    colors.$bright-yellow 0%,
+    colors.$light-light-blue 1%,
+    colors.$light-blue 95%,
+    colors.$sky-blue 100%
+  );
 }
 
 .about-page-container {
