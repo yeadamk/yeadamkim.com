@@ -1,4 +1,4 @@
-@use "../global/color-vars.scss" as colors;
+@import "../global/color-vars.scss";
 
 /* 
  * Page specific styles
@@ -9,7 +9,7 @@
   grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
   align-items: center;
   justify-items: center;
-  background-color: colors.$dark-yellow;
+  background-color: $dark-yellow;
   min-height: max(90vh, 30rem);
 
   @media (max-height: 300px) {

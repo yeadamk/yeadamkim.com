@@ -1,11 +1,11 @@
-@use "../global/color-vars.scss" as colors;
-@use "../global/animations.scss" as anim;
+@import "../global/color-vars.scss";
+@import "../global/animations.scss";
 
 /* 
  * Page specific styles
  */
 .projects-background-container {
-  background: linear-gradient(135deg, colors.$mid-blue 0%, colors.$dark-blue 100%);
+  background: linear-gradient(135deg, $mid-blue 0%, $dark-blue 100%);
 }
 
 .projects-container {
@@ -26,7 +26,7 @@
 }
 
 .projects-text {
-  color: colors.$dark-text;
+  color: $dark-text;
   position: relative;
   font-weight: 600;
   text-align: center;
@@ -68,12 +68,12 @@
   .github-text {
     display: inline;
     position: relative;
-    color: colors.$light-light-blue;
+    color: $light-light-blue;
     font-family: Monarda, Arial, Helvetica, sans-serif;
     font-size: 120%;
     transition: color 300ms;
     pointer-events: auto;
-    @include anim.reverse-underline-animation(4px, colors.$light_purple, 0.7rem);
+    @include reverse-underline-animation(4px, $light_purple, 0.7rem);
   }
 
   .new-tab-icon {
