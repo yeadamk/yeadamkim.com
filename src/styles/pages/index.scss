@@ -1,10 +1,10 @@
 /* 
  * Imports
  */
-@import "../lib/typed.scss";
-@import "../lib/typed-config.scss";
-@import "../global/color-vars.scss";
-@import "../global/animations.scss";
+@use "../lib/typed.scss" as typed;
+@use "../lib/typed-config.scss" as typed_config;
+@use "../global/color-vars.scss" as colors;
+@use "../global/animations.scss" as anim;
 
 /* 
  * General
@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: center;
   font-family: DMSerifDisplay, Arial, Helvetica, sans-serif;
-  background-color: $dark-yellow;
+  background-color: colors.$dark-yellow;
   min-height: max(90vh, 30rem);
 
   user-select: none;
@@ -45,7 +45,7 @@
 }
 
 .hero-text {
-  color: $dark-and-darker;
+  color: colors.$dark-and-darker;
   position: relative;
   font-weight: 600;
   text-align: center;
@@ -117,7 +117,7 @@
   }
 
   > .placeholder {
-    @include typed(
+    @include typed.typed(
       "(ﾉ◕ヮ◕)ﾉ・ﾟ✧",
       "༼ つ ◕_◕ ༽つ",
       "ʕ •`ᴥ•´ʔ",
@@ -144,8 +144,8 @@
       "(•̀ᴗ•́)",
       "\\(ᵔᵕᵔ)/",
       "ʕ •́؈•̀)",
-      $speeds,
-      $options
+      typed_config.$speeds,
+      typed_config.$options
     );
   }
 
@@ -161,7 +161,13 @@
 
 // Gradient
 .gradient-container {
-  background: linear-gradient(180deg, $dark-yellow 3%, $secondary-color 44%, $primary-color 70%, $dark 100%);
+  background: linear-gradient(
+    180deg,
+    colors.$dark-yellow 3%,
+    colors.$secondary-color 44%,
+    colors.$primary-color 70%,
+    colors.$dark 100%
+  );
 }
 
 // About section
@@ -180,7 +186,7 @@
 .about-header {
   // align left by default
   align-self: flex-start;
-  background-color: $light-dark;
+  background-color: colors.$light-dark;
   color: white;
   font-family: Lato-Black, Arial, Helvetica, sans-serif;
   font-size: 2.5rem;
@@ -192,7 +198,7 @@
   padding: 1rem 4rem;
 
   > a {
-    @include underline-animation(5px, white, -3px, 250ms, 1s);
+    @include anim.underline-animation(5px, white, -3px, 250ms, 1s);
   }
 
   @media (max-width: 768px) {
@@ -209,11 +215,19 @@
   }
 }
 
-.about-text {
-  // align left by default
-  align-self: flex-start;
+.about-header-right {
+  @extend .about-header;
+  align-self: flex-end;
+  border-top-right-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+@mixin about-text($align-self) {
+  align-self: $align-self;
   white-space: pre-line;
-  background-color: $light-dark;
+  background-color: colors.$light-dark;
   color: white;
   font-family: Lato-Regular, Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
@@ -231,16 +245,24 @@
   }
 }
 
-.about-header-right {
-  @extend .about-header;
-  align-self: flex-end;
-  border-top-right-radius: 0rem;
-  border-bottom-right-radius: 0rem;
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
+.about-text {
+  @include about-text(flex-start);
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+
+  @media (max-width: 904px) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
 
 .about-text-right {
-  @extend .about-text;
-  align-self: flex-end;
+  @include about-text(flex-end);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+
+  @media (max-width: 904px) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
