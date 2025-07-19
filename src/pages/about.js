@@ -29,23 +29,25 @@ const AboutPage = () => {
   }, [darkMode]);
 
   const highlightType = darkMode ? "underline" : "highlight";
-  const highlightColor = darkMode ? {
-    computation: "#cca218",
-    ucla: "#2774ae",
-    development: "#8bc34a",
-    mathCS: "#cca218",
-    swe: "#9c27a1",
-    sports: "#ff9800",
-    piano: "#ca1e63",
-  } : {
-    computation: "#ffd54f",
-    ucla: "#ffd54f",
-    development: "#ffd54f",
-    mathCS: "#ffd54f",
-    swe: "#ffd54f",
-    sports: "#ffd54f",
-    piano: "#ffd54f",
-  };
+  const highlightColor = darkMode
+    ? {
+        computation: "#cca218",
+        ucla: "#2774ae",
+        development: "#8bc34a",
+        mathCS: "#cca218",
+        swe: "#9c27a1",
+        sports: "#ff9800",
+        piano: "#ca1e63",
+      }
+    : {
+        computation: "#ffd54f",
+        ucla: "#ffd54f",
+        development: "#ffd54f",
+        mathCS: "#ffd54f",
+        swe: "#ffd54f",
+        sports: "#ffd54f",
+        piano: "#ffd54f",
+      };
 
   return (
     <Layout>
@@ -53,7 +55,16 @@ const AboutPage = () => {
         <div className="about-page-container fadeIn">
           <h1 className="about-page-header cursive">{aboutHeader}</h1>
           <p className="about-page-text">
-            I'm a fourth-year{" "}
+            I'm a recent{" "}
+            <RoughNotation
+              content="UCLA"
+              type={highlightType}
+              color={highlightColor.ucla}
+              width="5"
+              padding="0"
+              delay="1000"
+            />{" "}
+            grad with a degree in{" "}
             <RoughNotation
               content="Mathematics of Computation"
               type={highlightType}
@@ -62,15 +73,6 @@ const AboutPage = () => {
               padding="0"
               delay="500"
             />{" "}
-            major at{" "}
-            <RoughNotation
-              content="UCLA"
-              type={highlightType}
-              color={highlightColor.ucla}
-              width="5"
-              padding="0"
-              delay="1000"
-            />
             . I'm interested in{" "}
             <RoughNotation
               content="full-stack or back-end development"
@@ -80,10 +82,10 @@ const AboutPage = () => {
               padding="0"
               delay="2000"
             />
-            , delivering products, features, and optimizations directly to end-users. 
-            I love to work on personal projects on the side, tinker around
-            with my linux terminal, and keep up with the latest tech videos on
-            YouTube. With a strong foundation in{" "}
+            , delivering products, features, and optimizations directly to
+            end-users. I love to work on personal projects on the side, tinker
+            around with my linux terminal, and keep up with the latest tech
+            videos on YouTube. With a strong foundation in{" "}
             <RoughNotation
               content="Mathematics and Computer Science"
               type={highlightType}
@@ -101,7 +103,7 @@ const AboutPage = () => {
               padding="0"
               delay="5000"
             />{" "}
-            to create meaningful solutions that benefit people around the world. 
+            to create meaningful solutions that benefit people around the world.
             Apart from academics, I also enjoy playing various{" "}
             <RoughNotation
               content="sports"
